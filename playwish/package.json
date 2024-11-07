@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "concurrently": "^9.1.0"
+  },
+  "scripts": {
+    "client": "npm run dev --prefix play-wish-test",
+    "server": "node testserver/server.js",
+    "dev": "concurrently \"npm run server\" \"yarn client\""
+  }
+
+}
