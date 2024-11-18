@@ -1,8 +1,12 @@
-// server/server.js
+require('dotenv').config();
 const express = require('express');
 const cors = require('cors'); 
+const axios = require('axios'); 
+
+
 const app = express();
 const PORT = 5050; // 프론트엔드와 다른 포트를 사용
+
 
 // 각 카테고리별 곡 리스트 (예시)
 const categories = {
@@ -58,6 +62,62 @@ app.post('/api/getSong', (req, res) => {
 
   res.status(200).json({ song: randomSong });
 });
+
+
+// //openAI 관련 변수
+// const messages = [
+//   { role: 'system', content: '당신은 소망을 분석하여 카테고리를 매칭해주는 최고의 감정 감별사입니다. 응답은 카테고리 내에 있는 영어 단어로만 해주세요. 카테고리에는 "love", "success" 두가지가 있습니다.' },
+//   { role: 'user', content: `다음 문장을 읽고 아래 두 가지 카테고리 중 하나를 선택해 주세요.\n\n"love": 사랑, 우정, 감정과 관계에 관한 내용에 해당합니다.\n"success": 목표, 성취, 자기 개발, 꿈에 관한 내용에 해당합니다.\n\n문장: "${wish}"\n카테고리:` }
+// ]
+
+// const gptInput = {
+//   model: 'gpt-3.5-turbo',
+//   temperature: 0.5,
+//   messages: messages,
+// }
+
+
+
+//openAI 요청 -> 카테고리 연결
+// 카테고리 매칭을 위한 API
+app.post('/api/getCategory', async (req, res) => {
+  const { wish } = req.body;
+  const openaiApiKey = "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";
+
+  if (!openaiApiKey) {
+    return res.status(500).json({ error: 'OpenAI API key is not set in environment variables' });
+  }
+
+  try {
+    const response = await axios.post(
+      'https://api.openai.com/v1/chat/completions',  // 새로운 URL
+      {
+        model: 'gpt-3.5-turbo',
+        messages: [
+          { role: 'system', content: '당신은 소망을 분석하여 카테고리를 매칭해주는 최고의 감정 감별사입니다. 응답은 무조건 카테고리에 있는 영어 단어 형식으로만 해주세요. 카테고리에는 "love", "success" 두 가지가 있습니다.' },
+          { role: 'user', content: `다음 문장을 읽고 아래 두 가지 카테고리 중 하나를 선택해 주세요.\n\n"love": 사랑, 우정, 감정과 관계에 관한 내용에 해당합니다.\n"success": 목표, 성취, 자기 개발, 꿈에 관한 내용에 해당합니다.\n\n문장: "${wish}"\n카테고리:` }
+        ],
+        temperature: 0.5
+      },
+      {
+        headers: {
+          'Authorization': `Bearer ${openaiApiKey}`,
+          'Content-Type': 'application/json'
+        }
+      }
+    );
+
+    // 응답에서 카테고리 추출
+    const matchedCategory = response.data.choices[0].message.content.trim().toLowerCase();
+    res.json({ category: matchedCategory });
+  } 
+  
+  catch (error) {
+    console.error('OpenAI API 요청 오류:', error);
+    res.status(500).json({ error: 'Failed to fetch category' });
+  }
+});
+
 
 // 서버 시작
 app.listen(PORT, () => {

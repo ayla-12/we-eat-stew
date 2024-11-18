@@ -12,3 +12,14 @@ export const getRandomSong = async (category) => {
     return null;
   }
 };
+
+//카테고리 추론 함수
+export const getCategoryForWish = async (wish) => {
+    try {
+      const response = await axios.post('http://localhost:5050/api/getCategory', { wish });
+      return response.data.category;
+    } catch (error) {
+      console.error('카테고리 추론 실패:', error);
+      return null;
+    }
+  };

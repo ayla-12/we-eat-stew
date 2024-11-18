@@ -1,11 +1,12 @@
 {
   "dependencies": {
-    "concurrently": "^9.1.0"
+    "concurrently": "^9.1.0",
+    "dotenv": "^16.4.5",
+    "openai": "^4.71.1"
   },
   "scripts": {
     "client": "npm run dev --prefix play-wish-test",
     "server": "node testserver/server.js",
     "dev": "concurrently \"npm run server\" \"yarn client\""
   }
-
 }
