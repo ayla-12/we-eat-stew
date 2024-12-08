@@ -23,7 +23,7 @@ const GlobalStyle = createGlobalStyle`
 
   :root {
     --min-width: 375px;
-    --max-width: 430px;
+    --max-width: 375px;
   }
 
   html,

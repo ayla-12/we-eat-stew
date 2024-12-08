@@ -4,3 +4,8 @@ declare module '*.svg?react' {
 	export const ReactComponent: React.FunctionComponent<React.ComponentProps<'svg'> & { title?: string }>;
 	export default ReactComponent;
 }
+
+declare module '*.png' {
+	const content: string;
+	export default content;
+}
