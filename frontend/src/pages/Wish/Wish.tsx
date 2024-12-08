@@ -1,4 +1,4 @@
-import { homeHeader, wishBackgroundImage } from '@/assets/img';
+import { homeHeader, musicNoteRed, pink2025, wishBackgroundImage } from '@/assets/img';
 import RecommendButton from '@/components/Button/RecommendButton';
 import NameForm from '@/components/TextField/NameForm';
 import WishForm from '@/components/TextField/WishForm';
@@ -25,6 +25,10 @@ const Wish = () => {
 
 	return (
 		<WishPageWrapper>
+			<DecoWrapper>
+				<img src={pink2025} alt="2025 핑크색" className="year" />
+				<img src={musicNoteRed} alt="음표" className="note" />
+			</DecoWrapper>
 			<WishHeaderWrapper>
 				<img src={homeHeader} alt="헤더" />
 			</WishHeaderWrapper>
@@ -88,5 +92,26 @@ const WishFormWrapper = styled.div`
 	h1 {
 		${({ theme }) => theme.fonts.Header}
 		color: ${({ theme }) => theme.colors.green}
+	}
+`;
+
+const DecoWrapper = styled.div`
+	z-index: 10;
+	position: relative;
+
+	img {
+		position: absolute;
+	}
+
+	.year {
+		top: 10.3rem;
+		width: 18rem;
+		height: auto;
+	}
+
+	.note {
+		top: 16.1rem;
+		width: 9.2rem;
+		right: 3.6rem;
 	}
 `;

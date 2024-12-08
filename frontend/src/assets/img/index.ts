@@ -6,6 +6,7 @@ import arrowRed from './arrow_red.png';
 import listeningFufu from './fufu_png.png';
 import homeBubble from './home_chatbubble.png';
 import homeHeader from './home_header.png';
+import musicNoteRed from './music_note.png';
 import nameForm from './name_form.png';
 import questionMarkRed from './question_mark.png';
 import recommendButtonDefault from './recommend_button_default.png';
@@ -29,4 +30,5 @@ export {
 	wishForm,
 	recommendButtonDefault,
 	recommendButtonSelected,
+	musicNoteRed,
 };
