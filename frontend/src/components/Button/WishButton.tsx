@@ -1,5 +1,4 @@
-import defaultImage from '@/assets/img/wish_button_default.png';
-import selectedImage from '@/assets/img/wish_button_selected.png';
+import { wishButtonDefault, wishButtonSelected } from '@/assets/img';
 import styled from 'styled-components';
 
 interface ButtonProps {
@@ -9,7 +8,7 @@ interface ButtonProps {
 const WishButton = ({ onClick }: ButtonProps) => {
 	return (
 		<ButtonWrapper onClick={onClick}>
-			<img src={defaultImage} alt="Button" />
+			<img src={wishButtonDefault} alt="Button" />
 		</ButtonWrapper>
 	);
 };
@@ -30,12 +29,12 @@ const ButtonWrapper = styled.button`
 
 	/* Hover 상태 이미지 */
 	&:hover img {
-		content: url(${selectedImage});
+		content: url(${wishButtonSelected});
 	}
 
 	/* Active 상태 이미지 */
 	&:active img {
-		content: url(${selectedImage});
+		content: url(${wishButtonSelected});
 		transform: scale(0.95); /* Active 시 버튼 이미지 크기 축소 */
 	}
 `;

@@ -1,8 +1,4 @@
-import homeBackgroundImage from '@/assets/img/HOME_background.png';
-import listeningFufu from '@/assets/img/fufu_png.png';
-import homeBubble from '@/assets/img/home_chatbubble.png';
-import homeHeader from '@/assets/img/home_header.png';
-import { ButtonWishDefault } from '@/assets/svg';
+import { homeBackgroundImage, homeBubble, homeHeader, listeningFufu } from '@/assets/img';
 import WishButton from '@/components/Button/WishButton';
 import { flexCssGenerator } from '@/styles/customStyle.ts';
 import { useNavigate } from 'react-router-dom';
