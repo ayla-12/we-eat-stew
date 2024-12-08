@@ -6,7 +6,7 @@ const colors = {
 	pink: '#FC8BCF',
 	yellow: '#FFD348',
 	green: '#09491B',
-	red: 'EF3030',
+	red: '#EF3030',
 	lightyellow: '#FFFDE6',
 	deepgreen: '#002803',
 	burgundy: '#A00008',
