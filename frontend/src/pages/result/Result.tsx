@@ -9,21 +9,64 @@ import {
 	songContainer,
 	timerContainer,
 } from '@/assets/img';
+import ListenButton from '@/components/Button/ListenButton';
+import SharedButton from '@/components/Button/SharedButton';
+import TimerMessage from '@/components/Result/TimerMesseage';
 import { flexCssGenerator } from '@/styles/customStyle.ts';
 import html2canvas from 'html2canvas';
 import { useEffect, useState } from 'react';
+import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import styled from 'styled-components';
 
 const Result = () => {
+	const location = useLocation();
+	const navigate = useNavigate();
 	const [nickname, setNickname] = useState('');
+	const [song, setSong] = useState(() => location.state?.song);
 
 	useEffect(() => {
-		// localStorage에서 'nickname' 값 가져오기
+		// localStorage에서 닉네임 가져오기
 		const storedNickname = localStorage.getItem('nickname');
 		if (storedNickname) {
 			setNickname(storedNickname);
 		}
 	}, []);
+
+	useEffect(() => {
+		if (!song) {
+			// song 정보가 없을 때 fallback 처리
+			navigate('/loading', { replace: true });
+		}
+	}, [song, navigate]);
+
+	if (!song) return <p>Loading...</p>;
+
+	const handleListenButtonClick = () => {
+		window.location.href = song.link;
+	};
+
+	const handleSharedButtonClick = async () => {
+		const url = window.location.href; // 현재 페이지 URL
+		const text = '새해 첫 곡과 함께 2025년을 시작해보세요!'; // 공유 메시지
+		const title = '2025 새해 첫 곡';
+
+		// Web Share API가 지원되는지 확인
+		if (navigator.share) {
+			try {
+				// 기본 공유 창 열기
+				await navigator.share({
+					title: title,
+					text: text,
+					url: url,
+				});
+				console.log('공유 성공!');
+			} catch (error) {
+				console.error('공유 실패:', error);
+			}
+		} else {
+			alert('이 브라우저는 공유 기능을 지원하지 않습니다.');
+		}
+	};
 
 	const handleSaveImage = async () => {
 		const saveWrapper = document.getElementById('save-wrapper'); // SaveWrapper 요소 선택
@@ -60,26 +103,32 @@ const Result = () => {
 					</FufuWrapper>
 					<SongWrapper>
 						<img src={songContainer} alt="추천 곡" />
-						<TextOverlay>
+						<TextOverlay className="nickname">
 							{nickname}의
 							<br />
 							새해 첫 곡
 						</TextOverlay>
+						<TextOverlay className="title">{song.title}</TextOverlay>
+						<TextOverlay className="artist">{song.artist}</TextOverlay>
 					</SongWrapper>
 					<TimerWrapper>
 						<img src={timerContainer} alt="시간" />
+						<MessageWrapper>
+							<TimerMessage timestamp={song.timestamp} />
+						</MessageWrapper>
 					</TimerWrapper>
 					<LyricsWrapper>
 						<img src={lyricsContainer} alt="가사" />
+						<TextOverlay className="lyrics">{song.lyrics}</TextOverlay>
 					</LyricsWrapper>
 				</ContentsWrapper>
 			</SaveWrapper>
 			<BottomWrapper>
 				<SaveButton onClick={handleSaveImage}>꾹 눌러 이미지 저장하기</SaveButton>
-				{/* <ButtonWrapper>
-					<SaveButton></SaveButton>
-					<Group></Group>
-				</ButtonWrapper> */}
+				<ButtonWrapper>
+					<ListenButton onClick={handleListenButtonClick} />
+					<SharedButton onClick={handleSharedButtonClick} />
+				</ButtonWrapper>
 			</BottomWrapper>
 		</ResultWrapper>
 	);
@@ -208,13 +257,55 @@ const SaveButton = styled.div`
 	padding: 1rem 2rem;
 	cursor: pointer;
 	${({ theme }) => theme.fonts.Header2};
+	text-align: center;
 `;
 
 const TextOverlay = styled.div`
 	position: absolute;
-	top: 6.5rem;
-	left: 15rem;
-	color: ${({ theme }) => theme.colors.green};
-	${({ theme }) => theme.fonts.Header};
 	text-align: center;
+	transform: translate(-50%, -50%);
+	left: 19.8rem;
+
+	&.nickname {
+		top: 9.8rem;
+		color: ${({ theme }) => theme.colors.green};
+		${({ theme }) => theme.fonts.Header};
+	}
+
+	&.title {
+		top: 15.517rem;
+		color: ${({ theme }) => theme.colors.green};
+		${({ theme }) => theme.fonts.Body};
+	}
+
+	&.artist {
+		top: 17.817rem;
+		color: ${({ theme }) => theme.colors.green};
+		${({ theme }) => theme.fonts.Body2};
+	}
+
+	&.lyrics {
+		width: 28rem;
+		height: 6.8rem;
+		top: 5.817rem;
+		left: 15.9rem;
+		color: ${({ theme }) => theme.colors.lightyellow};
+		${({ theme }) => theme.fonts.Body2};
+	}
+`;
+
+const MessageWrapper = styled.div`
+	position: absolute;
+	width: 30rem;
+	height: 4rem;
+	top: 3.4rem;
+	left: 1rem;
+	text-align: center;
+	color: ${({ theme }) => theme.colors.green};
+	${({ theme }) => theme.fonts.Header3};
+`;
+
+const ButtonWrapper = styled.div`
+	${flexCssGenerator('flex', 'center', 'center', 'row')}
+	gap: 1.2rem;
 `;
