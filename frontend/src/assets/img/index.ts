@@ -7,6 +7,10 @@ import loadingBackgroundImage from './background/Loading_background.png';
 import resultSaveBackground from './background/Result_background.png';
 import wishBackgroundImage from './background/WISH_background.png';
 import resultBottomBackground from './background/resultBottom_background.png';
+import archiveButtonDefault from './button/archive_button_default.png';
+import archiveButtonSelected from './button/archive_button_selected.png';
+import instaButtonDefault from './button/insta_button_default.png';
+import instaButtonSelected from './button/insta_button_selected.png';
 import listenButtonDefault from './button/listen_button_default.png';
 import listenButtonSelected from './button/listen_button_selected.png';
 import recommendButtonDefault from './button/recommend_button_default.png';
@@ -24,6 +28,7 @@ import arrowRed from './deco/arrow_red.png';
 import lineDeco from './deco/line.png';
 import musicNoteRed from './deco/music_note.png';
 import questionMarkRed from './deco/question_mark.png';
+import arrowThree from './deco/threeArrow.png';
 import nameForm from './form/name_form.png';
 import wishForm from './form/wish_form.png';
 import challengeFufu from './fufu/challengeFufu.png';
@@ -42,6 +47,11 @@ import loadingHeader from './header/loading_header.png';
 import resultHeader from './header/resultHeader.png';
 
 export {
+	archiveButtonDefault,
+	archiveButtonSelected,
+	instaButtonDefault,
+	instaButtonSelected,
+	arrowThree,
 	listenButtonDefault,
 	listenButtonSelected,
 	sharedButtonDefault,

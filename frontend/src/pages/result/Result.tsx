@@ -1,4 +1,5 @@
 import {
+	arrowThree,
 	impeachmentFufu,
 	lineDeco,
 	lyricsContainer,
@@ -9,6 +10,8 @@ import {
 	songContainer,
 	timerContainer,
 } from '@/assets/img';
+import ArchiveButton from '@/components/Button/ArchiveButton';
+import InstaButton from '@/components/Button/InstaButton';
 import ListenButton from '@/components/Button/ListenButton';
 import SharedButton from '@/components/Button/SharedButton';
 import TimerMessage from '@/components/Result/TimerMesseage';
@@ -124,11 +127,20 @@ const Result = () => {
 				</ContentsWrapper>
 			</SaveWrapper>
 			<BottomWrapper>
-				<SaveButton onClick={handleSaveImage}>꾹 눌러 이미지 저장하기</SaveButton>
 				<ButtonWrapper>
-					<ListenButton onClick={handleListenButtonClick} />
-					<SharedButton onClick={handleSharedButtonClick} />
+					<SaveButton onClick={handleSaveImage}>꾹 눌러 이미지 저장하기</SaveButton>
+					<ButtonGroup>
+						<ListenButton onClick={handleListenButtonClick} />
+						<SharedButton onClick={handleSharedButtonClick} />
+					</ButtonGroup>
 				</ButtonWrapper>
+				<InfoWrapper>
+					<img src={arrowThree} alt="데코 화살표" className="arrow" />
+					<InfoButtonWrapper>
+						<ArchiveButton />
+						<InstaButton />
+					</InfoButtonWrapper>
+				</InfoWrapper>
 			</BottomWrapper>
 		</ResultWrapper>
 	);
@@ -139,7 +151,6 @@ export default Result;
 const ResultWrapper = styled.div`
 	width: 100%;
 	height: 100vh;
-	background-color: ${({ theme }) => theme.colors.burgundy};
 `;
 
 const SaveWrapper = styled.div`
@@ -167,6 +178,8 @@ const HeaderWrapper = styled.div`
 const ContentsWrapper = styled.div`
 	${flexCssGenerator('flex', 'center', 'center', 'column')}
 `;
+
+const ButtonWrapper = styled.div``;
 
 const BottomWrapper = styled.div`
 	width: 100%;
@@ -305,7 +318,22 @@ const MessageWrapper = styled.div`
 	${({ theme }) => theme.fonts.Header3};
 `;
 
-const ButtonWrapper = styled.div`
+const ButtonGroup = styled.div`
 	${flexCssGenerator('flex', 'center', 'center', 'row')}
+	gap: 1.2rem;
+`;
+
+const InfoWrapper = styled.div`
+	${flexCssGenerator('flex', 'center', 'center', 'column')}
+	gap: 2.341rem;
+	padding-top: 21rem;
+
+	.arrow {
+		width: 9.527rem;
+		height: 5.859rem;
+	}
+`;
+const InfoButtonWrapper = styled.div`
+	${flexCssGenerator('flex', 'center', 'center', 'column')}
 	gap: 1.2rem;
 `;
