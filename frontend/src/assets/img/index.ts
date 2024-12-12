@@ -7,8 +7,12 @@ import loadingBackgroundImage from './background/Loading_background.png';
 import resultSaveBackground from './background/Result_background.png';
 import wishBackgroundImage from './background/WISH_background.png';
 import resultBottomBackground from './background/resultBottom_background.png';
+import listenButtonDefault from './button/listen_button_default.png';
+import listenButtonSelected from './button/listen_button_selected.png';
 import recommendButtonDefault from './button/recommend_button_default.png';
 import recommendButtonSelected from './button/recommend_button_selected.png';
+import sharedButtonDefault from './button/shared_button_default.png';
+import sharedButtonSelected from './button/shared_button_selected.png';
 import wishButtonDefault from './button/wish_button_default.png';
 import wishButtonSelected from './button/wish_button_selected.png';
 import homeBubble from './chatBubble/home_chatbubble.png';
@@ -38,6 +42,10 @@ import loadingHeader from './header/loading_header.png';
 import resultHeader from './header/resultHeader.png';
 
 export {
+	listenButtonDefault,
+	listenButtonSelected,
+	sharedButtonDefault,
+	sharedButtonSelected,
 	lineDeco,
 	challengeFufu,
 	favoriteFufu,
