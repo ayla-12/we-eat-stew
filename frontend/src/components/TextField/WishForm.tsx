@@ -1,15 +1,17 @@
 import { wishForm } from '@/assets/img';
-import { useState } from 'react';
 import styled, { css } from 'styled-components';
 
-const WishForm = () => {
-	const [inputValue, setInputValue] = useState(''); // 입력값 상태
+interface WishFormProps {
+	wish: string;
+	onWishChange: (value: string) => void;
+}
 
+const WishForm: React.FC<WishFormProps> = ({ wish, onWishChange }) => {
 	// 입력값 변경 핸들러
 	const handleInputChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
 		// 글자 수 제한
 		if (e.target.value.length <= 100) {
-			setInputValue(e.target.value);
+			onWishChange(e.target.value); // 부모 컴포넌트에서 `wish` 상태 업데이트
 		}
 	};
 
@@ -17,26 +19,28 @@ const WishForm = () => {
 		<FieldWrapper>
 			<TextArea
 				placeholder="간절한 소원 딱 하나만 빌어보세요!&#10;&#10;&#10;&#10;&#10;&#10;추천 정확도가 높아져요."
-				value={inputValue}
+				value={wish} // 부모 컴포넌트에서 전달된 `wish` 값 사용
 				onChange={handleInputChange} // 입력값 변경 이벤트
-				exceedsLimit={inputValue.length > 100} // 글자 수 초과 여부 전달
+				exceedsLimit={wish.length > 100} // 글자 수 초과 여부 전달
 			/>
 		</FieldWrapper>
 	);
 };
 
+export default WishForm;
+
 // 스타일 컴포넌트
 const FieldWrapper = styled.div`
-	width: 32rem; /* PNG 이미지 크기와 동일하게 설정 */
-	height: 24rem; /* PNG 이미지 크기와 동일하게 설정 */
+	width: 32rem;
+	height: 24rem;
 	background-image: url(${wishForm});
 	background-size: cover;
 	background-position: center;
 	position: relative;
 	display: flex;
 	justify-content: center;
-	align-items: flex-start; /* 위쪽 정렬 */
-	padding-top: 1.6rem; /* 위쪽 패딩 추가 */
+	align-items: flex-start;
+	padding-top: 1.6rem;
 `;
 
 const TextArea = styled.textarea<{ exceedsLimit: boolean }>`
@@ -45,25 +49,21 @@ const TextArea = styled.textarea<{ exceedsLimit: boolean }>`
 	border: none;
 	outline: none;
 	background: transparent;
-	color: ${({ theme, exceedsLimit }) =>
-		exceedsLimit ? theme.colors.red : theme.colors.lightyellow}; // 글자 수 초과 시 빨간색
+	color: ${({ theme, exceedsLimit }) => (exceedsLimit ? theme.colors.red : theme.colors.lightyellow)};
 	${({ theme }) => theme.fonts.Body};
-	resize: none; /* 사용자가 크기를 조절하지 못하도록 고정 */
-	overflow-wrap: break-word; /* 텍스트가 영역을 넘지 않도록 줄바꿈 */
-	white-space: pre-wrap; /* 줄바꿈 처리 */
+	resize: none;
+	overflow-wrap: break-word;
+	white-space: pre-wrap;
 
 	::placeholder {
 		color: ${({ theme }) => theme.colors.lightyellow};
 		opacity: 0.7;
-		text-align: left; /* 왼쪽 정렬 */
-		vertical-align: top; /* 위쪽 정렬 */
-		line-height: 1.5; /* 줄 간격 추가 */
 	}
 
 	${({ exceedsLimit }) =>
 		exceedsLimit &&
 		css`
-			animation: shake 0.3s; /* 글자 수 초과 시 흔들리는 효과 */
+			animation: shake 0.3s;
 		`}
 
 	@keyframes shake {
@@ -82,5 +82,3 @@ const TextArea = styled.textarea<{ exceedsLimit: boolean }>`
 		}
 	}
 `;
-
-export default WishForm;

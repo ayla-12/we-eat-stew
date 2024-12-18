@@ -7,6 +7,7 @@ import FufuWrapper from '@/components/Result/FufuWrapper';
 import LyricsWrapper from '@/components/Result/LyricsWrapper';
 import SongWrapper from '@/components/Result/SongWrapper';
 import TimerWrapper from '@/components/Result/TimerWrapper';
+import { Song, songById } from '@/mocks/songData';
 import { flexCssGenerator } from '@/styles/customStyle.ts';
 import html2canvas from 'html2canvas';
 import { useEffect, useState } from 'react';
@@ -14,45 +15,44 @@ import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import styled from 'styled-components';
 
 const Result = () => {
+	const { id } = useParams<{ id: string }>();
 	const location = useLocation();
 	const navigate = useNavigate();
 	const [nickname, setNickname] = useState('');
-	const [song, setSong] = useState(() => location.state?.song);
+	const [songData, setSongData] = useState<Song | null>(null);
+	const category = location.state?.category || null; // loading에서 넘어온 category
 
 	useEffect(() => {
-		//로컬스토리지 가져오기
+		// 로컬 스토리지에서 닉네임 불러오기
 		const storedNickname = localStorage.getItem('nickname');
-		if (storedNickname) {
-			setNickname(storedNickname);
-		}
+		if (storedNickname) setNickname(storedNickname);
 	}, []);
 
 	useEffect(() => {
-		if (!song) {
-			// song 정보가 없을 때 fallback 처리
-			navigate('/loading', { replace: true });
+		// id로 곡 정보 가져오기
+		if (id) {
+			const song = songById[parseInt(id, 10)];
+			if (song) {
+				setSongData(song);
+			} else {
+				console.error('Invalid song ID:', id);
+				navigate('/404', { replace: true }); // 잘못된 id 처리
+			}
 		}
-	}, [song, navigate]);
+	}, [id, navigate]);
 
 	const handleListenButtonClick = () => {
-		window.location.href = song.link;
+		if (songData) window.location.href = songData.link;
 	};
 
 	const handleSharedButtonClick = async () => {
-		const url = window.location.href; // 현재 페이지 URL
-		const text = '새해 첫 곡과 함께 2025년을 시작해보세요!'; // 공유 메시지
+		const url = window.location.href;
+		const text = '새해 첫 곡과 함께 2025년을 시작해보세요!';
 		const title = '2025 새해 첫 곡';
 
-		// Web Share API가 지원되는지 확인
 		if (navigator.share) {
 			try {
-				// 기본 공유 창 열기
-				await navigator.share({
-					title: title,
-					text: text,
-					url: url,
-				});
-				console.log('공유 성공!');
+				await navigator.share({ title, text, url });
 			} catch (error) {
 				console.error('공유 실패:', error);
 			}
@@ -62,15 +62,12 @@ const Result = () => {
 	};
 
 	const handleSaveImage = async () => {
-		const saveWrapper = document.getElementById('save-wrapper'); // SaveWrapper 요소 선택
+		const saveWrapper = document.getElementById('save-wrapper');
 		if (!saveWrapper) return;
 
 		try {
-			// html2canvas로 캡처
-			const canvas = await html2canvas(saveWrapper, { useCORS: true }); // CORS 이슈 방지
-			const imgData = canvas.toDataURL('image/png'); // 이미지 데이터를 URL 형식으로 변환
-
-			// 이미지 다운로드 링크 생성
+			const canvas = await html2canvas(saveWrapper, { useCORS: true });
+			const imgData = canvas.toDataURL('image/png');
 			const link = document.createElement('a');
 			link.href = imgData;
 			link.download = 'saved_image.png';
@@ -79,6 +76,11 @@ const Result = () => {
 			console.error('Error saving image:', error);
 		}
 	};
+
+	// songData나 category가 로드되지 않았을 때 로딩 화면 표시
+	if (!songData || !category) {
+		return <p>Loading...</p>;
+	}
 
 	return (
 		<ResultWrapper>
@@ -90,13 +92,13 @@ const Result = () => {
 					<img src={resultHeader} alt="홈 헤더" />
 				</HeaderWrapper>
 				<ContentsWrapper>
-					<FufuWrapper category="impeachment" />
+					<FufuWrapper category={category} />
 					<TextWrapper>
 						<SongPosition>
-							<SongWrapper nickname={nickname} title={song.title} artist={song.artist} />
+							<SongWrapper nickname={nickname} title={songData.title} artist={songData.artist} />
 						</SongPosition>
-						<TimerWrapper song={song.timestamp} />
-						<LyricsWrapper lyrics={song.lyrics} />
+						<TimerWrapper song={songData.timestamp} />
+						<LyricsWrapper lyrics={songData.lyrics} />
 					</TextWrapper>
 				</ContentsWrapper>
 			</SaveWrapper>
@@ -132,9 +134,9 @@ const SaveWrapper = styled.div`
 	height: 77.6rem;
 	position: relative;
 	background-image: url(${resultSaveBackground});
-	background-size: cover; // 이미지를 화면에 맞게 확대/축소
-	background-position: center; // 이미지가 중앙에 위치하도록 설정
-	background-repeat: no-repeat; // 배경이 반복되지 않도록 설정
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
 	padding-bottom: 2rem;
 `;
 
@@ -165,9 +167,9 @@ const BottomWrapper = styled.div`
 	height: 80.4rem;
 	background-color: ${({ theme }) => theme.colors.burgundy};
 	background-image: url(${resultBottomBackground});
-	background-size: cover; // 이미지를 화면에 맞게 확대/축소
-	background-position: center; // 이미지가 중앙에 위치하도록 설정
-	background-repeat: no-repeat; // 배경이 반복되지 않도록 설정
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
 `;
 
 const DecoWrapper = styled.div`

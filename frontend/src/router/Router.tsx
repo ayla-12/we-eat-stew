@@ -20,7 +20,7 @@ export const router = createBrowserRouter([
 	},
 	{
 		// 동적 경로 설정
-		path: `${PATH.RESULT}/:category/:id`,
+		path: `${PATH.RESULT}/:id`,
 		element: <Result />,
 	},
 ]);
