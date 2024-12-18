@@ -1,39 +1,46 @@
 import { green2025, listeningFufu, loadingBackgroundImage, loadingBubble, loadingHeader } from '@/assets/img';
 import loadingAnimation from '@/assets/lottie/loading.json';
-import categories from '@/mocks/songData';
+import { categories } from '@/mocks/songData';
 import { flexCssGenerator } from '@/styles/customStyle.ts';
 import Lottie from 'lottie-react';
 import { useEffect } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 
 const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
 const Loading = () => {
+	const location = useLocation();
 	const navigate = useNavigate();
-	const { id } = useParams<{ id: string }>();
-	const category = 'impeachment';
+	const { category } = location.state || {}; // 이전 컴포넌트에서 전달된 상태 확인
 
 	useEffect(() => {
 		const loadData = async () => {
-			// 최소 3초 지연
-			await delay(5000);
+			if (!category || !categories[category]) {
+				console.error('Invalid category:', category);
+				navigate('/wish'); // 카테고리가 유효하지 않을 경우 초기 화면으로 리다이렉트
+				return;
+			}
 
-			// 카테고리와 ID로 랜덤 데이터를 가져옴
-			const songId = parseInt(id || '0', 10);
+			// 최소 3초 지연
+			await delay(3000);
+
+			// 해당 카테고리에서 랜덤 곡 선택
 			const categorySongs = categories[category];
-			const randomSong =
-				categorySongs.find((song) => song.id === songId) ||
-				categorySongs[Math.floor(Math.random() * categorySongs.length)];
+			const randomSong = categorySongs[Math.floor(Math.random() * categorySongs.length)];
+
+			if (!randomSong) {
+				console.error('No songs available in this category:', category);
+				navigate('/wish');
+				return;
+			}
 
 			// 결과 화면으로 이동하며 곡 데이터 전달
-			navigate(`/result/${category}/${randomSong.id}`, {
-				replace: true,
-				state: { song: randomSong },
-			});
+			navigate(`/result/${randomSong.id}`, { state: { song: randomSong, category } });
 		};
+
 		loadData();
-	}, [category, id, navigate]);
+	}, [category, navigate]);
 
 	return (
 		<LoadingWrapper>
@@ -69,9 +76,9 @@ const LoadingWrapper = styled.div`
 	width: 100%;
 	height: 100vh;
 	background-image: url(${loadingBackgroundImage});
-	background-size: cover; // 이미지를 화면에 맞게 확대/축소
-	background-position: center; // 이미지가 중앙에 위치하도록 설정
-	background-repeat: no-repeat; // 배경이 반복되지 않도록 설정
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
 `;
 
 const LoadingHeaderWrapper = styled.div`
@@ -92,7 +99,7 @@ const LoadingContentWrapper = styled.div`
 `;
 
 const LottieNote = styled.div`
-	width: 20rem; /* 로티 애니메이션 크기 조정 */
+	width: 20rem;
 	height: 6rem;
 	display: flex;
 	justify-content: center;
@@ -113,7 +120,7 @@ const BubbleWrapper = styled.div`
 	width: 24.7rem;
 	height: 16.8rem;
 	margin-bottom: 0.6rem;
-	position: relative; /* 자식 요소를 절대 위치로 설정할 수 있도록 하기 위해 상대 위치로 설정 */
+	position: relative;
 
 	img {
 		width: 100%;
@@ -124,9 +131,9 @@ const BubbleWrapper = styled.div`
 
 const TextOverlay = styled.div`
 	position: absolute;
-	top: 7.6rem; /* 말풍선의 중앙에 텍스트를 배치 */
+	top: 7.6rem;
 	left: 50%;
-	transform: translateX(-50%); /* 텍스트를 정확히 중앙에 위치시키기 위해 */
+	transform: translateX(-50%);
 	color: ${({ theme }) => theme.colors.lightyellow};
 	${({ theme }) => theme.fonts.Body};
 	text-align: center;

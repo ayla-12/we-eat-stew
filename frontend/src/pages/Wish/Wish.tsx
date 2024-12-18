@@ -3,6 +3,7 @@ import RecommendButton from '@/components/Button/RecommendButton';
 import NameForm from '@/components/TextField/NameForm';
 import WishForm from '@/components/TextField/WishForm';
 import { flexCssGenerator } from '@/styles/customStyle.ts';
+import axios from 'axios';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
@@ -12,12 +13,37 @@ const Wish = () => {
 	const [wish, setWish] = useState('');
 	const navigate = useNavigate(); // useNavigate 훅 사용
 
-	const handleButtonClick = () => {
-		if (name.trim().length > 0 && name.trim().length <= 10) {
-			localStorage.setItem('nickname', name); // 로컬스토리지에 이름 저장
-			navigate('/loading'); // 다음 페이지로 이동
-		} else {
-			alert('이름은 1글자 이상, 10글자 이내로 입력해주세요.');
+	//api 요청 함수
+	const matchCategory = async (wish: string) => {
+		const response = await axios.post('http://localhost:3000/api/match-category', {
+			wish,
+		});
+		return response.data;
+	};
+
+	const handleButtonClick = async () => {
+		console.log('Current wish:', wish); // 값 확인
+		if (!wish.trim()) {
+			alert('소원을 입력해주세요!');
+			return;
+		}
+
+		try {
+			const data = await matchCategory(wish);
+			const { category } = data;
+
+			if (name.trim().length > 0 && name.trim().length <= 10) {
+				localStorage.setItem('nickname', name); // 로컬스토리지에 이름 저장
+				console.log(data.category);
+				console.log('Navigating to loading with category:', category);
+
+				navigate('/loading', { state: { category } }); // 다음 페이지로 이동
+			} else {
+				alert('이름은 1글자 이상, 10글자 이내로 입력해주세요.');
+			}
+		} catch (error) {
+			console.error('Error matching category:', error);
+			alert('카테고리를 매칭하는 중 오류가 발생했습니다. 다시 시도해주세요.');
 		}
 	};
 

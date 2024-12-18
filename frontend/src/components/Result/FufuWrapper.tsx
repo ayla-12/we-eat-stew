@@ -1,4 +1,4 @@
-import { fufu1, fufu2, fufu3, fufu4, fufu5, fufu6, fufu7, fufu8, fufu9, fufu10, fufu11,fufu12, fufu13 } from '@/assets/img';
+import { fufu1, fufu2, fufu3, fufu4, fufu5, fufu6, fufu7, fufu8, fufu9, fufu10, fufu11,fufu12, fufu13, fufu14 } from '@/assets/img';
 import { flexCssGenerator } from '@/styles/customStyle.ts';
 import styled from 'styled-components';
 
@@ -21,6 +21,7 @@ const fufuImages: Record<string, string> = {
 	freedom: fufu11,
 	escape: fufu12,
 	happiness: fufu13,
+	success: fufu14,
 
 };
 

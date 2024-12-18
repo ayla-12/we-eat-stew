@@ -1,5 +1,5 @@
 // 데이터 타입 정의
-interface Song {
+export interface Song {
 	id: number; // 고유 식별자
 	title: string; // 노래 제목
 	artist: string; // 아티스트
@@ -1874,4 +1874,16 @@ const categories: Category = {
 	],
 };
 
-export default categories;
+// 모든 곡을 하나의 배열로 병합
+const allSongs = Object.values(categories).flat();
+
+// id를 키로 하는 맵 생성
+const songById = allSongs.reduce(
+	(map, song) => {
+		map[song.id] = song;
+		return map;
+	},
+	{} as Record<number, Song>,
+);
+
+export { categories, songById, allSongs };
