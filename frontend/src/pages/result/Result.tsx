@@ -1,20 +1,12 @@
-import {
-	arrowThree,
-	impeachmentFufu,
-	lineDeco,
-	lyricsContainer,
-	red2025,
-	resultBottomBackground,
-	resultHeader,
-	resultSaveBackground,
-	songContainer,
-	timerContainer,
-} from '@/assets/img';
+import { arrowThree, red2025, resultBottomBackground, resultHeader, resultSaveBackground } from '@/assets/img';
 import ArchiveButton from '@/components/Button/ArchiveButton';
 import InstaButton from '@/components/Button/InstaButton';
 import ListenButton from '@/components/Button/ListenButton';
 import SharedButton from '@/components/Button/SharedButton';
-import TimerMessage from '@/components/Result/TimerMesseage';
+import FufuWrapper from '@/components/Result/FufuWrapper';
+import LyricsWrapper from '@/components/Result/LyricsWrapper';
+import SongWrapper from '@/components/Result/SongWrapper';
+import TimerWrapper from '@/components/Result/TimerWrapper';
 import { flexCssGenerator } from '@/styles/customStyle.ts';
 import html2canvas from 'html2canvas';
 import { useEffect, useState } from 'react';
@@ -28,7 +20,7 @@ const Result = () => {
 	const [song, setSong] = useState(() => location.state?.song);
 
 	useEffect(() => {
-		// localStorage에서 닉네임 가져오기
+		//로컬스토리지 가져오기
 		const storedNickname = localStorage.getItem('nickname');
 		if (storedNickname) {
 			setNickname(storedNickname);
@@ -41,8 +33,6 @@ const Result = () => {
 			navigate('/loading', { replace: true });
 		}
 	}, [song, navigate]);
-
-	if (!song) return <p>Loading...</p>;
 
 	const handleListenButtonClick = () => {
 		window.location.href = song.link;
@@ -95,35 +85,19 @@ const Result = () => {
 			<SaveWrapper id="save-wrapper">
 				<DecoWrapper>
 					<img src={red2025} alt="2025 빨간색" className="year" />
-					<img src={lineDeco} alt="가름 선" className="line" />
 				</DecoWrapper>
 				<HeaderWrapper>
 					<img src={resultHeader} alt="홈 헤더" />
 				</HeaderWrapper>
 				<ContentsWrapper>
-					<FufuWrapper>
-						<img src={impeachmentFufu} alt="탄핵 푸푸" />
-					</FufuWrapper>
-					<SongWrapper>
-						<img src={songContainer} alt="추천 곡" />
-						<TextOverlay className="nickname">
-							{nickname}의
-							<br />
-							새해 첫 곡
-						</TextOverlay>
-						<TextOverlay className="title">{song.title}</TextOverlay>
-						<TextOverlay className="artist">{song.artist}</TextOverlay>
-					</SongWrapper>
-					<TimerWrapper>
-						<img src={timerContainer} alt="시간" />
-						<MessageWrapper>
-							<TimerMessage timestamp={song.timestamp} />
-						</MessageWrapper>
-					</TimerWrapper>
-					<LyricsWrapper>
-						<img src={lyricsContainer} alt="가사" />
-						<TextOverlay className="lyrics">{song.lyrics}</TextOverlay>
-					</LyricsWrapper>
+					<FufuWrapper category="impeachment" />
+					<TextWrapper>
+						<SongPosition>
+							<SongWrapper nickname={nickname} title={song.title} artist={song.artist} />
+						</SongPosition>
+						<TimerWrapper song={song.timestamp} />
+						<LyricsWrapper lyrics={song.lyrics} />
+					</TextWrapper>
 				</ContentsWrapper>
 			</SaveWrapper>
 			<BottomWrapper>
@@ -176,7 +150,12 @@ const HeaderWrapper = styled.div`
 `;
 
 const ContentsWrapper = styled.div`
-	${flexCssGenerator('flex', 'center', 'center', 'column')}
+	${flexCssGenerator('flex', '', '', 'column')}
+	width: 37.5rem;
+`;
+
+const TextWrapper = styled.div`
+	position: relative;
 `;
 
 const ButtonWrapper = styled.div``;
@@ -205,63 +184,12 @@ const DecoWrapper = styled.div`
 		width: 21.469rem;
 		height: auto;
 	}
-
-	.line {
-		top: 48.717rem;
-		left: 4.8rem;
-		width: 28rem;
-	}
 `;
 
-const FufuWrapper = styled.div`
-	width: 28rem;
-	height: 20rem;
-	img {
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-	}
-`;
-
-const SongWrapper = styled.div`
-	width: 42.4rem;
-	height: 21.128rem;
+const SongPosition = styled.div`
 	position: absolute;
-	top: 35.6rem;
+	top: -1.7rem;
 	left: -1.4rem;
-
-	img {
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-	}
-`;
-
-const LyricsWrapper = styled.div`
-	width: 32rem;
-	height: 10rem;
-	position: absolute;
-	top: 56.2rem;
-	left: 1.6rem;
-
-	img {
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-	}
-`;
-const TimerWrapper = styled.div`
-	width: 32rem;
-	height: 10rem;
-	position: absolute;
-	top: 64.9rem;
-	left: 3.9rem;
-
-	img {
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-	}
 `;
 
 const SaveButton = styled.div`
@@ -271,51 +199,6 @@ const SaveButton = styled.div`
 	cursor: pointer;
 	${({ theme }) => theme.fonts.Header2};
 	text-align: center;
-`;
-
-const TextOverlay = styled.div`
-	position: absolute;
-	text-align: center;
-	transform: translate(-50%, -50%);
-	left: 19.8rem;
-
-	&.nickname {
-		top: 9.8rem;
-		color: ${({ theme }) => theme.colors.green};
-		${({ theme }) => theme.fonts.Header};
-	}
-
-	&.title {
-		top: 15.517rem;
-		color: ${({ theme }) => theme.colors.green};
-		${({ theme }) => theme.fonts.Body};
-	}
-
-	&.artist {
-		top: 17.817rem;
-		color: ${({ theme }) => theme.colors.green};
-		${({ theme }) => theme.fonts.Body2};
-	}
-
-	&.lyrics {
-		width: 28rem;
-		height: 6.8rem;
-		top: 5.817rem;
-		left: 15.9rem;
-		color: ${({ theme }) => theme.colors.lightyellow};
-		${({ theme }) => theme.fonts.Body2};
-	}
-`;
-
-const MessageWrapper = styled.div`
-	position: absolute;
-	width: 30rem;
-	height: 4rem;
-	top: 3.4rem;
-	left: 1rem;
-	text-align: center;
-	color: ${({ theme }) => theme.colors.green};
-	${({ theme }) => theme.fonts.Header3};
 `;
 
 const ButtonGroup = styled.div`

@@ -31,17 +31,17 @@ import questionMarkRed from './deco/question_mark.png';
 import arrowThree from './deco/threeArrow.png';
 import nameForm from './form/name_form.png';
 import wishForm from './form/wish_form.png';
-import challengeFufu from './fufu/challengeFufu.png';
-import favoriteFufu from './fufu/favoriteFufu.png';
+import fufu1 from './fufu/challengeFufu.png';
+import fufu2 from './fufu/favoriteFufu.png';
 import listeningFufu from './fufu/fufu_png.png';
-import healthFufu from './fufu/healthFufu.png';
-import impeachmentFufu from './fufu/impeachmentFufu.png';
-import loveFufu from './fufu/loveFufu.png';
-import luckyFufu from './fufu/luckyFufu.png';
-import marriageFufu from './fufu/marriageFufu.png';
-import richFufu from './fufu/richFufu.png';
-import studyFufu from './fufu/studyFufu.png';
-import tripFufu from './fufu/tripFufu.png';
+import fufu3 from './fufu/healthFufu.png';
+import fufu4 from './fufu/impeachmentFufu.png';
+import fufu5 from './fufu/loveFufu.png';
+import fufu6 from './fufu/luckyFufu.png';
+import fufu7 from './fufu/marriageFufu.png';
+import fufu8 from './fufu/richFufu.png';
+import fufu9 from './fufu/studyFufu.png';
+import fufu10 from './fufu/tripFufu.png';
 import homeHeader from './header/home_header.png';
 import loadingHeader from './header/loading_header.png';
 import resultHeader from './header/resultHeader.png';
@@ -57,16 +57,16 @@ export {
 	sharedButtonDefault,
 	sharedButtonSelected,
 	lineDeco,
-	challengeFufu,
-	favoriteFufu,
-	healthFufu,
-	impeachmentFufu,
-	loveFufu,
-	luckyFufu,
-	marriageFufu,
-	richFufu,
-	studyFufu,
-	tripFufu,
+	fufu1,
+	fufu2,
+	fufu3,
+	fufu4,
+	fufu5,
+	fufu6,
+	fufu7,
+	fufu8,
+	fufu9,
+	fufu10,
 	homeBackgroundImage,
 	listeningFufu,
 	homeBubble,
