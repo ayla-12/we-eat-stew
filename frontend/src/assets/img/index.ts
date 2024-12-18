@@ -31,17 +31,20 @@ import questionMarkRed from './deco/question_mark.png';
 import arrowThree from './deco/threeArrow.png';
 import nameForm from './form/name_form.png';
 import wishForm from './form/wish_form.png';
-import fufu1 from './fufu/challengeFufu.png';
-import fufu2 from './fufu/favoriteFufu.png';
+import fufu1 from './fufu/fufu1.png';
+import fufu2 from './fufu/fufu2.png';
+import fufu3 from './fufu/fufu3.png';
+import fufu4 from './fufu/fufu4.png';
+import fufu5 from './fufu/fufu5.png';
+import fufu6 from './fufu/fufu6.png';
+import fufu7 from './fufu/fufu7.png';
+import fufu8 from './fufu/fufu8.png';
+import fufu9 from './fufu/fufu9.png';
+import fufu10 from './fufu/fufu10.png';
+import fufu11 from './fufu/fufu11.png';
+import fufu12 from './fufu/fufu12.png';
+import fufu13 from './fufu/fufu13.png';
 import listeningFufu from './fufu/fufu_png.png';
-import fufu3 from './fufu/healthFufu.png';
-import fufu4 from './fufu/impeachmentFufu.png';
-import fufu5 from './fufu/loveFufu.png';
-import fufu6 from './fufu/luckyFufu.png';
-import fufu7 from './fufu/marriageFufu.png';
-import fufu8 from './fufu/richFufu.png';
-import fufu9 from './fufu/studyFufu.png';
-import fufu10 from './fufu/tripFufu.png';
 import homeHeader from './header/home_header.png';
 import loadingHeader from './header/loading_header.png';
 import resultHeader from './header/resultHeader.png';
@@ -67,6 +70,9 @@ export {
 	fufu8,
 	fufu9,
 	fufu10,
+	fufu11,
+	fufu12,
+	fufu13,
 	homeBackgroundImage,
 	listeningFufu,
 	homeBubble,
