@@ -13,12 +13,7 @@ const Wish = () => {
 	const navigate = useNavigate(); // useNavigate 훅 사용
 
 	const handleButtonClick = () => {
-		if (name.trim().length > 0 && name.trim().length <= 10) {
-			localStorage.setItem('nickname', name); // 로컬스토리지에 이름 저장
-			navigate('/loading'); // 다음 페이지로 이동
-		} else {
-			alert('이름은 1글자 이상, 10글자 이내로 입력해주세요.');
-		}
+		navigate('/loading'); // Wish 페이지로 이동
 	};
 
 	const handleNameChange = (value: string) => {

@@ -1,16 +1,14 @@
 // useState 추가
 import { nameForm } from '@/assets/img';
+import { useState } from 'react';
 import styled, { css } from 'styled-components';
 
-interface NameFormProps {
-	name: string; // 부모로부터 전달받는 이름 상태
-	onNameChange: (value: string) => void; // 부모로 상태를 전달하는 함수
-}
+const NameForm = () => {
+	const [inputValue, setInputValue] = useState(''); // 입력값 상태
 
-const NameForm = ({ name, onNameChange }: NameFormProps) => {
 	// 입력값 변경 핸들러
 	const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-		onNameChange(e.target.value);
+		setInputValue(e.target.value);
 	};
 
 	return (
@@ -18,9 +16,9 @@ const NameForm = ({ name, onNameChange }: NameFormProps) => {
 			<TextInput
 				type="text"
 				placeholder="이름은 10글자 이내로!"
-				value={name}
+				value={inputValue}
 				onChange={handleInputChange} // 입력값 변경 이벤트
-				exceedsLimit={name.length > 10} // 글자 수 초과 여부 전달
+				exceedsLimit={inputValue.length > 10} // 글자 수 초과 여부 전달
 			/>
 		</FieldWrapper>
 	);
