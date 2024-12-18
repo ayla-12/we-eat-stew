@@ -21,7 +21,7 @@ interface Category {
 	fandom: Song[];
 	happiness: Song[];
 	luck: Song[];
-	challenge: Song[]; // 추가된 부분
+	challenge: Song[];
 }
 
 // 목 데이터
