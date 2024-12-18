@@ -1,0 +1,96 @@
+// assets/img/index.ts
+import green2025 from './2025/2025_green.png';
+import pink2025 from './2025/2025_pink.png';
+import red2025 from './2025/2025_red.png';
+import homeBackgroundImage from './background/HOME_background.png';
+import loadingBackgroundImage from './background/Loading_background.png';
+import resultSaveBackground from './background/Result_background.png';
+import wishBackgroundImage from './background/WISH_background.png';
+import resultBottomBackground from './background/resultBottom_background.png';
+import archiveButtonDefault from './button/archive_button_default.png';
+import archiveButtonSelected from './button/archive_button_selected.png';
+import instaButtonDefault from './button/insta_button_default.png';
+import instaButtonSelected from './button/insta_button_selected.png';
+import listenButtonDefault from './button/listen_button_default.png';
+import listenButtonSelected from './button/listen_button_selected.png';
+import recommendButtonDefault from './button/recommend_button_default.png';
+import recommendButtonSelected from './button/recommend_button_selected.png';
+import sharedButtonDefault from './button/shared_button_default.png';
+import sharedButtonSelected from './button/shared_button_selected.png';
+import wishButtonDefault from './button/wish_button_default.png';
+import wishButtonSelected from './button/wish_button_selected.png';
+import homeBubble from './chatBubble/home_chatbubble.png';
+import loadingBubble from './chatBubble/loading_chatbubble.png';
+import lyricsContainer from './container/lyricsContainer.png';
+import songContainer from './container/songContainer.png';
+import timerContainer from './container/timerContainer.png';
+import arrowRed from './deco/arrow_red.png';
+import lineDeco from './deco/line.png';
+import musicNoteRed from './deco/music_note.png';
+import questionMarkRed from './deco/question_mark.png';
+import arrowThree from './deco/threeArrow.png';
+import nameForm from './form/name_form.png';
+import wishForm from './form/wish_form.png';
+import fufu1 from './fufu/challengeFufu.png';
+import fufu2 from './fufu/favoriteFufu.png';
+import listeningFufu from './fufu/fufu_png.png';
+import fufu3 from './fufu/healthFufu.png';
+import fufu4 from './fufu/impeachmentFufu.png';
+import fufu5 from './fufu/loveFufu.png';
+import fufu6 from './fufu/luckyFufu.png';
+import fufu7 from './fufu/marriageFufu.png';
+import fufu8 from './fufu/richFufu.png';
+import fufu9 from './fufu/studyFufu.png';
+import fufu10 from './fufu/tripFufu.png';
+import homeHeader from './header/home_header.png';
+import loadingHeader from './header/loading_header.png';
+import resultHeader from './header/resultHeader.png';
+
+export {
+	archiveButtonDefault,
+	archiveButtonSelected,
+	instaButtonDefault,
+	instaButtonSelected,
+	arrowThree,
+	listenButtonDefault,
+	listenButtonSelected,
+	sharedButtonDefault,
+	sharedButtonSelected,
+	lineDeco,
+	fufu1,
+	fufu2,
+	fufu3,
+	fufu4,
+	fufu5,
+	fufu6,
+	fufu7,
+	fufu8,
+	fufu9,
+	fufu10,
+	homeBackgroundImage,
+	listeningFufu,
+	homeBubble,
+	homeHeader,
+	wishButtonDefault,
+	wishButtonSelected,
+	pink2025,
+	arrowRed,
+	questionMarkRed,
+	wishBackgroundImage,
+	nameForm,
+	wishForm,
+	recommendButtonDefault,
+	recommendButtonSelected,
+	musicNoteRed,
+	loadingBackgroundImage,
+	green2025,
+	loadingBubble,
+	loadingHeader,
+	resultBottomBackground,
+	resultSaveBackground,
+	red2025,
+	resultHeader,
+	lyricsContainer,
+	songContainer,
+	timerContainer,
+};
