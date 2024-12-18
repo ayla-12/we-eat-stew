@@ -8,6 +8,7 @@ import {
 	questionMarkRed,
 } from '@/assets/img';
 import WishButton from '@/components/Button/WishButton';
+import HomeChatBubble from '@/components/Home/HomeChatBubble';
 import { flexCssGenerator } from '@/styles/customStyle.ts';
 import { useNavigate } from 'react-router-dom';
 import styled, { keyframes } from 'styled-components';
@@ -31,21 +32,9 @@ const Home = () => {
 			</HomeHeaderWrapper>
 			<HomeContentWrapper>
 				<ImageWrapper>
-					{/* listeningFufu를 이미지로 삽입 */}
 					<img src={listeningFufu} alt="Listening Fufu" />
 				</ImageWrapper>
-				<ChatBubbleWrapper>
-					<img src={homeBubble} alt="말풍선" />
-					<TextOverlay>
-						새해 첫 곡이
-						<br />
-						한 해를 결정한다는데
-						<br />
-						소원을 입력하면
-						<br />
-						AI푸푸가 노래를 골라줄게!
-					</TextOverlay>
-				</ChatBubbleWrapper>
+				<HomeChatBubble />
 				<WishButton onClick={handleButtonClick} />
 			</HomeContentWrapper>
 		</HomeWrapper>
@@ -86,30 +75,6 @@ const ImageWrapper = styled.div`
 		height: 100%;
 		object-fit: cover;
 	}
-`;
-
-const ChatBubbleWrapper = styled.div`
-	width: 24.7rem;
-	height: 21.7rem;
-	margin-bottom: 0.6rem;
-	position: relative; /* 자식 요소를 절대 위치로 설정할 수 있도록 하기 위해 상대 위치로 설정 */
-
-	img {
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-	}
-`;
-
-const TextOverlay = styled.div`
-	position: absolute;
-	top: 7.6rem; /* 말풍선의 중앙에 텍스트를 배치 */
-	left: 50%;
-	transform: translateX(-50%); /* 텍스트를 정확히 중앙에 위치시키기 위해 */
-	color: ${({ theme }) => theme.colors.lightyellow};
-	${({ theme }) => theme.fonts.Body};
-	text-align: center;
-	width: 100%;
 `;
 
 // 물음표 애니메이션: 왼쪽으로 회전 후 오른쪽으로 회전

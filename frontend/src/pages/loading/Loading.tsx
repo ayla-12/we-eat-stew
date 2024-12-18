@@ -1,23 +1,39 @@
 import { green2025, listeningFufu, loadingBackgroundImage, loadingBubble, loadingHeader } from '@/assets/img';
 import loadingAnimation from '@/assets/lottie/loading.json';
+import categories from '@/mocks/songData';
 import { flexCssGenerator } from '@/styles/customStyle.ts';
 import Lottie from 'lottie-react';
 import { useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import styled from 'styled-components';
+
+const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
 const Loading = () => {
 	const navigate = useNavigate();
+	const { id } = useParams<{ id: string }>();
+	const category = 'impeachment';
 
-	// 3초 후에 /result로 이동
 	useEffect(() => {
-		const timer = setTimeout(() => {
-			navigate('/result'); // 3초 후에 /result로 이동
-		}, 3000);
+		const loadData = async () => {
+			// 최소 3초 지연
+			await delay(5000);
 
-		// 컴포넌트가 언마운트되면 타이머를 정리
-		return () => clearTimeout(timer);
-	}, [navigate]);
+			// 카테고리와 ID로 랜덤 데이터를 가져옴
+			const songId = parseInt(id || '0', 10);
+			const categorySongs = categories[category];
+			const randomSong =
+				categorySongs.find((song) => song.id === songId) ||
+				categorySongs[Math.floor(Math.random() * categorySongs.length)];
+
+			// 결과 화면으로 이동하며 곡 데이터 전달
+			navigate(`/result/${category}/${randomSong.id}`, {
+				replace: true,
+				state: { song: randomSong },
+			});
+		};
+		loadData();
+	}, [category, id, navigate]);
 
 	return (
 		<LoadingWrapper>
