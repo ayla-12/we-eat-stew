@@ -1,7 +1,7 @@
 // api/wishApi.ts
 import axios from 'axios';
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL; // 백엔드 API 주소
+const API_BASE_URL = 'https://we-eat-stew.com'; // 백엔드 API 주소
 console.log(API_BASE_URL); 
 
 /**
