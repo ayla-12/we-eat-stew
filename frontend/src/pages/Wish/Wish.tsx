@@ -34,13 +34,12 @@ const Wish = () => {
 
 		try {
 			const matchedCategory = await matchCategory(wish);
-			setCategory(matchedCategory);
-
+			const categoryValue = matchedCategory.category;
 			if (name.trim().length > 0 && name.trim().length <= 10) {
 				localStorage.setItem('nickname', name); // 로컬스토리지에 이름 저장
-				console.log('Navigating to loading with category:', category);
+				console.log('Navigating to loading with category:', categoryValue);
 
-				navigate('/loading', { state: { category } }); // 다음 페이지로 이동
+				navigate('/loading', { state: { category: categoryValue } }); // 다음 페이지로 이동
 			} else {
 				alert('이름은 1글자 이상, 10글자 이내로 입력해주세요.');
 			}
