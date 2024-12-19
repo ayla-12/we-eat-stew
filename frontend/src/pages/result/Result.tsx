@@ -48,7 +48,7 @@ const Result = () => {
 	const handleSharedButtonClick = async () => {
 		// 초기 화면 링크로 공유하려면 URL을 고정
 		const url = 'https://play-your-wish.vercel.app/'; // 초기 화면 링크
-		const text = `${nickname}의 새해 첫곡은? ${songData?.title} - ${songData?.artist}! \n나도 해볼까? 👉👉 ${url}`;
+		const text = `${nickname}의 새해 첫곡은? ${songData?.title} - ${songData?.artist}! \n나도 해볼까? ⬇️⬇️⬇️\n ${url}`;
 		const title = '2025 새해 첫 곡';
 		
 		// saveWrapper의 영역을 이미지로 저장
