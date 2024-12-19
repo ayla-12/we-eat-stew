@@ -1,7 +1,7 @@
 // api/wishApi.ts
 import axios from 'axios';
 
-const API_BASE_URL = process.env.API_BASE_URL; // 백엔드 API 주소
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL; // 백엔드 API 주소
 
 /**
  * 소원을 서버로 전송하여 카테고리 매칭 요청
