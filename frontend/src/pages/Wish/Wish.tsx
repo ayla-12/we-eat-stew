@@ -14,14 +14,6 @@ const Wish = () => {
 	const [wish, setWish] = useState('');
 	const navigate = useNavigate(); // useNavigate 훅 사용
 
-	//api 요청 함수
-	// const matchCategory = async (wish: string) => {
-	// 	const response = await axios.post('http://localhost:3000/api/match-category', {
-	// 		wish,
-	// 	});
-	// 	return response.data;
-	// };
-
 	const handleButtonClick = async () => {
 		console.log('Current wish:', wish); // 값 확인
 		if (!wish.trim()) {

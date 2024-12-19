@@ -46,20 +46,47 @@ const Result = () => {
 	};
 
 	const handleSharedButtonClick = async () => {
-		const url = window.location.href;
-		const text = '새해 첫 곡과 함께 2025년을 시작해보세요!';
+		// 초기 화면 링크로 공유하려면 URL을 고정
+		const url = 'https://play-your-wish.vercel.app/'; // 초기 화면 링크
+		const text = `${nickname}의 새해 첫곡은? ${songData?.title} - ${songData?.artist}! \n나도 해볼까? 👉👉 ${url}`;
 		const title = '2025 새해 첫 곡';
-
-		if (navigator.share) {
-			try {
-				await navigator.share({ title, text, url });
-			} catch (error) {
-				console.error('공유 실패:', error);
-			}
-		} else {
-			alert('이 브라우저는 공유 기능을 지원하지 않습니다.');
+		
+		// saveWrapper의 영역을 이미지로 저장
+		const saveWrapper = document.getElementById('save-wrapper');
+		if (!saveWrapper) {
+		  alert('이미지를 불러오는 데 실패했습니다.');
+		  return;
 		}
-	};
+	  
+		try {
+		  const canvas = await html2canvas(saveWrapper, { useCORS: true });
+		  const imgData = canvas.toDataURL('image/jpeg');  // 이미지 파일을 base64로 변환
+	  
+		  // 이미지 파일을 Blob 형태로 변환
+		  const imgBlob = await (await fetch(imgData)).blob();
+		  const file = new File([imgBlob], 'image.jpg', { type: 'image/jpeg' });
+	  
+		  // Share API 지원 여부 확인
+		  if (navigator.share) {
+			try {
+			  await navigator.share({
+				title,
+				text,
+				url,
+				files: [file] // 이미지를 공유에 포함
+			  });
+			} catch (error) {
+			  console.error('공유 실패:', error);
+			}
+		  } else {
+			alert('이 브라우저는 공유 기능을 지원하지 않습니다.');
+		  }
+		} catch (error) {
+		  console.error('Error capturing image:', error);
+		}
+	  };
+	  
+	
 
 	const handleSaveImage = async () => {
 		const saveWrapper = document.getElementById('save-wrapper');
