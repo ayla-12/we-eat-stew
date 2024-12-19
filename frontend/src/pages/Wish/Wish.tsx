@@ -80,11 +80,22 @@ export default Wish;
 
 const WishPageWrapper = styled.div`
 	width: 100%;
-	height: 100vh;
+	height: 81.2rem; //디폴트는 원래 배경 사이즈인 812px로 고정을 해두기기
 	background-image: url(${wishBackgroundImage});
-	background-size: cover; // 이미지를 화면에 맞게 확대/축소
-	background-position: center; // 이미지가 중앙에 위치하도록 설정
-	background-repeat: no-repeat; // 배경이 반복되지 않도록 설정
+	background-size: cover; /* 기본적으로 cover로 설정하여 비율을 유지하며 꽉 채움 */
+	background-position: center; /* 중앙에 배경 이미지 위치 */
+	background-repeat: no-repeat; /* 배경 이미지 반복 방지 */
+
+	/* 높이가 812px 이상인 화면에서만 배경이 100vh로 꽉 차게 */
+	@media (min-height: 812px) {
+		height: 100vh; /* 812px 이상에서는 화면 세로 꽉 채우기 */
+		background-size: cover; /* 배경 이미지를 꽉 채우도록 */
+	}
+
+	/* 812px 이하인 화면에서는 배경이 잘리지 않도록 */
+	@media (max-height: 811px) {
+		background-size: contain; /* 화면에 맞게 이미지 크기 조정, 잘리지 않음 */
+	}
 `;
 
 const WishHeaderWrapper = styled.div`
