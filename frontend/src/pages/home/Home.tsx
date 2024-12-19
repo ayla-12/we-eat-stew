@@ -1,7 +1,6 @@
 import {
 	arrowRed,
 	homeBackgroundImage,
-	homeBubble,
 	homeHeader,
 	listeningFufu,
 	pink2025,

@@ -8,7 +8,7 @@ export interface Song {
 	link: string; // 노래 링크
 }
 
-interface Category {
+export interface Category {
 	impeachment: Song[];
 	health: Song[];
 	marriage: Song[];

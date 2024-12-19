@@ -1,6 +1,6 @@
 import { green2025, listeningFufu, loadingBackgroundImage, loadingBubble, loadingHeader } from '@/assets/img';
 import loadingAnimation from '@/assets/lottie/loading.json';
-import { categories } from '@/mocks/songData';
+import { categories, Category } from '@/mocks/songData';
 import { flexCssGenerator } from '@/styles/customStyle.ts';
 import Lottie from 'lottie-react';
 import { useEffect } from 'react';
@@ -12,8 +12,9 @@ const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 const Loading = () => {
 	const location = useLocation();
 	const navigate = useNavigate();
-	const { category } = location.state || {}; // 이전 컴포넌트에서 전달된 상태 확인
+	const { category }: { category: keyof Category } = location.state || {}; // 이전 컴포넌트에서 전달된 상태 확인
 
+	
 	useEffect(() => {
 		const loadData = async () => {
 			if (!category || !categories[category]) {

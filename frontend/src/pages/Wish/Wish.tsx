@@ -12,8 +12,6 @@ import styled from 'styled-components';
 const Wish = () => {
 	const [name, setName] = useState('');
 	const [wish, setWish] = useState('');
-	const [category, setCategory] = useState<string | null>(null);
-	const [error, setError] = useState<string | null>(null);
 	const navigate = useNavigate(); // useNavigate 훅 사용
 
 	//api 요청 함수
@@ -25,7 +23,6 @@ const Wish = () => {
 	// };
 
 	const handleButtonClick = async () => {
-		setError(null);
 		console.log('Current wish:', wish); // 값 확인
 		if (!wish.trim()) {
 			alert('소원을 입력해주세요!');
@@ -35,6 +32,13 @@ const Wish = () => {
 		try {
 			const matchedCategory = await matchCategory(wish);
 			const categoryValue = matchedCategory.category;
+
+			if (typeof categoryValue !== 'string') {
+				console.error('Category is not a string:', categoryValue);
+				alert('잘못된 카테고리입니다.');
+				return;
+			}
+
 			if (name.trim().length > 0 && name.trim().length <= 10) {
 				localStorage.setItem('nickname', name); // 로컬스토리지에 이름 저장
 				console.log('Navigating to loading with category:', categoryValue);
