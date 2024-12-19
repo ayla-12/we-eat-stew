@@ -8,7 +8,7 @@ const API_BASE_URL = 'http://3.27.66.110:3000'; // 백엔드 API 주소
  * @param wish 사용자가 입력한 소원 텍스트
  * @returns 매칭된 카테고리명(string)
  */
-export const matchCategory = async (wish: string): Promise<string> => {
+export const matchCategory = async (wish: string): Promise< {category : string }> => {
   try {
     const response = await axios.post(`${API_BASE_URL}/api/match-category`, { wish });
     return response.data;
