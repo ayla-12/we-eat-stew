@@ -639,8 +639,8 @@ const categories: Category = {
 		{
 			id: 1000212,
 			title: '행복은 늘 가까이에 있어',
-			artist: '볼빨간사춘기, 바닐라 어쿠스틱, 스웨덴세탁소, 스무살, 레터 플로우, 김지수, WH3N, 보라미유, 최유리',
-			lyrics: `누구나 행복은 항상
+			artist: '볼빨간사춘기 외 8팀',
+			lyrics: `누구나 행복은 항상 /n
 	가까이에 있다는 거`,
 			timestamp: 114.0,
 			link: 'https://www.youtube.com/watch?v=YafkWH9mujo&pp=ygUh7ZaJ67O17J2AIOuKmCDqsIDquYzsnbTsl5Ag7J6I7Ja0',

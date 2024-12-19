@@ -9,7 +9,7 @@ interface fufuProps {
 // 카테고리명에 따른 이미지 매핑 객체
 const fufuImages: Record<string, string> = {
 	challenge: fufu1,
-	favorite: fufu2,
+	fandom: fufu2,
 	health: fufu3,
 	impeachment: fufu4,
 	love: fufu5,
