@@ -88,7 +88,7 @@ const WishPageWrapper = styled.div`
 
 	/* 높이가 812px 이상인 화면에서만 배경이 100vh로 꽉 차게 */
 	@media (min-height: 812px) {
-		height: 100vh; /* 812px 이상에서는 화면 세로 꽉 채우기 */
+		height: 100dvh; /* 812px 이상에서는 화면 세로 꽉 채우기 */
 		background-size: cover; /* 배경 이미지를 꽉 채우도록 */
 	}
 
