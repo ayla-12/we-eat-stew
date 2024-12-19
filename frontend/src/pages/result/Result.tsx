@@ -47,9 +47,8 @@ const Result = () => {
 
 	const handleSharedButtonClick = async () => {
 		// 초기 화면 링크로 공유하려면 URL을 고정
-		const url = 'https://play-your-wish.vercel.app/'; // 초기 화면 링크
-		const text = `${nickname}의 새해 첫곡은? ${songData?.title} - ${songData?.artist}! \n나도 해볼까? 👉👉 ${url}`;
-		const title = '2025 새해 첫 곡';
+		const text = `stew!와 함께하는 ${nickname}의 새해 첫곡은?\n\n<${songData?.title}> - ${songData?.artist}!\n\n나도 해볼까?\n⬇️⬇️⬇️\n\n\nhttps://play-your-wish.vercel.app/`;
+		const title = 'stew!와 함께하는 2025 새해 첫 곡';
 		
 		// saveWrapper의 영역을 이미지로 저장
 		const saveWrapper = document.getElementById('save-wrapper');
@@ -72,7 +71,6 @@ const Result = () => {
 			  await navigator.share({
 				title,
 				text,
-				url,
 				files: [file] // 이미지를 공유에 포함
 			  });
 			} catch (error) {
