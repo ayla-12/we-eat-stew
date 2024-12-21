@@ -18,7 +18,7 @@ const WishForm: React.FC<WishFormProps> = ({ wish, onWishChange }) => {
 	return (
 		<FieldWrapper>
 			<TextArea
-				placeholder="간절한 소원 딱 하나만 빌어보세요!&#10;&#10;&#10;&#10;&#10;&#10;추천 정확도가 높아져요."
+				placeholder="간절한 소원 딱 하나만 빌어보세요!&#10;추천 정확도가 높아져요."
 				value={wish} // 부모 컴포넌트에서 전달된 `wish` 값 사용
 				onChange={handleInputChange} // 입력값 변경 이벤트
 				exceedsLimit={wish.length > 100} // 글자 수 초과 여부 전달
