@@ -12,13 +12,14 @@ const GlobalStyle = createGlobalStyle`
     src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2410-1@1.0/BMkkubulimTTF-Regular.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
-  }
-  @font-face {
+}
+@font-face {
     font-family: 'LeeSeoyun';
     src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2202-2@1.0/LeeSeoyun.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-  }
+}
+
 
   :root {
     --min-width: 375px;
@@ -32,7 +33,6 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     width: 100%;
-    height: 100%; /* 세로 꽉 차게 */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -46,27 +46,18 @@ const GlobalStyle = createGlobalStyle`
 
   #root {
     width: 100%;
-    height: 100%; /* 세로 꽉 차게 */
     min-width: var(--min-width);
     max-width: var(--max-width);
-    min-height: 100vh;
+    min-height: 100dvh;
     background-color: ${({ theme }) => theme.colors.lightyellow};
     margin: 0 auto;
   }
 
-  @media (max-width: 431px) {
+  @media (min-width: 430px) {
     #root {
-      width: 100%;
-      min-width: 0; /* 모바일에서만 가로 꽉 채우기 */
-      max-width: 100%; /* 모바일에서만 가로 꽉 채우기 */
-      height: 100vh; /* 모바일에서 세로도 꽉 차게 */
-    }
-  }
+        max-width: var(--max-width);
+        box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
 
-  @media (min-width: 431px) {
-    #root {
-      max-width: var(--max-width);
-      box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
     }
   }
 
