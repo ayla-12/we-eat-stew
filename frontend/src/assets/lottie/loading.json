@@ -14,7 +14,7 @@
 			"w": 1600,
 			"h": 1920,
 			"u": "src/assets/svg/",
-			"p": "image0.svg",
+			"p": "music1.svg",
 			"e": 0
 		},
 		{
@@ -22,7 +22,7 @@
 			"w": 1600,
 			"h": 1920,
 			"u": "src/assets/svg/",
-			"p": "image1.svg",
+			"p": "music2.svg",
 			"e": 0
 		}
 	],
