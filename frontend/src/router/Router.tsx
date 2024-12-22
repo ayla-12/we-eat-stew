@@ -1,27 +1,29 @@
 import Wish from '@/pages/Wish/Wish';
 import Home from '@/pages/home/Home';
+import Loading from '@/pages/loading/Loading';
 import Result from '@/pages/result/Result';
+// 로딩 페이지 추가
 import { PATH } from '@/router/path.ts';
-import { createBrowserRouter, Navigate } from 'react-router-dom';
+import { createBrowserRouter } from 'react-router-dom';
 
-// /loading 경로로 접근하면 /로 리다이렉트
+// /loading 경로에서 category가 없으면 홈으로 리다이렉트
 const router = createBrowserRouter([
-  {
-    path: PATH.HOME,
-    element: <Home />,
-  },
-  {
-    path: PATH.WISH,
-    element: <Wish />,
-  },
-  {
-    path: PATH.LOADING,
-    element: <Navigate to={PATH.HOME} />, // /loading으로 접근하면 /로 리다이렉트
-  },
-  {
-    path: `${PATH.RESULT}/:id`,
-    element: <Result />,
-  },
+	{
+		path: PATH.HOME,
+		element: <Home />,
+	},
+	{
+		path: PATH.WISH,
+		element: <Wish />,
+	},
+	{
+		path: PATH.LOADING,
+		element: <Loading />,
+	},
+	{
+		path: `${PATH.RESULT}/:id`,
+		element: <Result />,
+	},
 ]);
 
 export default router;
