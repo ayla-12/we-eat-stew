@@ -1,6 +1,5 @@
 import Wish from '@/pages/Wish/Wish';
 import Home from '@/pages/home/Home';
-import Loading from '@/pages/loading/Loading';
 import Result from '@/pages/result/Result';
 import { PATH } from '@/router/path.ts';
 import { createBrowserRouter, Navigate } from 'react-router-dom';
