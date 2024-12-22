@@ -35,5 +35,9 @@ const Lyrics = styled.div`
 		text-align: center;
 		color: ${({ theme }) => theme.colors.lightyellow};
 		${({ theme }) => theme.fonts.Body2};
+
+		white-space: pre-wrap; /* 텍스트에 있는 줄바꿈을 그대로 적용 */
+		word-wrap: break-word; /* 긴 단어가 넘칠 때 자동으로 줄바꿈 */
+		margin: 0; /* 기본 여백 제거 */
 	}
 `;
