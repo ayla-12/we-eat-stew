@@ -48,7 +48,6 @@ const Result = () => {
 	};
 
 	const handleRetryButtonClick = () => {
-		const navigate = useNavigate();
 		navigate('/'); // 홈으로 리다이렉션
 	};
 	const handleSharedButtonClick = async () => {
