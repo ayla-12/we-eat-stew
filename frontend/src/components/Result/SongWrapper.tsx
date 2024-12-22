@@ -52,6 +52,9 @@ const TextContent = styled.div`
 
 const TextOverlay = styled.div`
 	text-align: center;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
 
 	&.nickname {
 		color: ${({ theme }) => theme.colors.green};
@@ -64,10 +67,12 @@ const TextOverlay = styled.div`
 		${({ theme }) => theme.fonts.Body};
 		padding-top: 1.2rem;
 		padding-bottom: 0.4rem;
+		max-width: 28rem; /* 제목 최대 너비 설정 */
 	}
 
 	&.artist {
 		color: ${({ theme }) => theme.colors.green};
 		${({ theme }) => theme.fonts.Body2};
+		max-width: 28rem;
 	}
 `;

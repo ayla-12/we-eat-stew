@@ -663,6 +663,16 @@ So 다 같이 뛰어놀자 한바탕 미쳐보자`,
 	],
 	happiness: [
 		{
+			id: 3000001,
+			title: '꽃놀이',
+			artist: '청요일',
+			lyrics: `좋아하는 것이 가득하길
+동그라미 치는 날짜마다
+다음 날을 기다릴 수 있기를`,
+			timestamp: 150,
+			link: 'https://www.youtube.com/watch?v=28gjWEp2M34',
+		},
+		{
 			id: 1000210,
 			title: '행복',
 			artist: '슈퍼주니어',
