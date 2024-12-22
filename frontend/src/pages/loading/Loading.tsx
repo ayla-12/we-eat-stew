@@ -1,6 +1,6 @@
 import { green2025, listeningFufu, loadingBackgroundImage, loadingBubble, loadingHeader } from '@/assets/img';
 import loadingAnimation from '@/assets/lottie/loading.json';
-import { categories, Category } from '@/mocks/songData';
+import { Category, categories } from '@/mocks/songData';
 import { flexCssGenerator } from '@/styles/customStyle.ts';
 import Lottie from 'lottie-react';
 import { useEffect } from 'react';
@@ -14,12 +14,12 @@ const Loading = () => {
 	const navigate = useNavigate();
 	const { category }: { category: keyof Category } = location.state || {}; // 이전 컴포넌트에서 전달된 상태 확인
 
-	
 	useEffect(() => {
 		const loadData = async () => {
+			// wish가 없으면 category매칭이 안됨 -> 없으면 홈으로 리다이렉트
 			if (!category || !categories[category]) {
 				console.error('Invalid category:', category);
-				navigate('/wish'); // 카테고리가 유효하지 않을 경우 초기 화면으로 리다이렉트
+				navigate('/'); // 홈으로 리다이렉트
 				return;
 			}
 

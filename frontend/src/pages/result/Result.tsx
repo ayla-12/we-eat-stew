@@ -120,7 +120,7 @@ const Result = () => {
 					<FufuWrapper category={category} />
 					<TextWrapper>
 						<SongPosition>
-							<SongWrapper nickname={nickname} title={songData.title} artist={songData.artist} />
+							<SongWrapper nickname={nickname || '당신'} title={songData.title} artist={songData.artist} />
 						</SongPosition>
 						<TimerWrapper song={songData.timestamp} />
 						<LyricsWrapper lyrics={songData.lyrics} />
