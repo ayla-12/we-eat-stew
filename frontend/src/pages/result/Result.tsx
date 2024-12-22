@@ -47,6 +47,10 @@ const Result = () => {
 		if (songData) window.location.href = songData.link;
 	};
 
+	const handleRetryButtonClick = () => {
+		const navigate = useNavigate();
+		navigate('/'); // 홈으로 리다이렉션
+	};
 	const handleSharedButtonClick = async () => {
 		// 초기 화면 링크로 공유하려면 URL을 고정
 		const text = `stew!와 함께하는 ${nickname}의 새해 첫곡은?\n\n<${songData?.title}> - ${songData?.artist}!\n\n나도 해볼까?\n⬇️⬇️⬇️\n\n\nhttps://play-your-wish.vercel.app/`;
@@ -136,7 +140,7 @@ const Result = () => {
 						<ListenButton onClick={handleListenButtonClick} />
 						<SharedButton onClick={handleSharedButtonClick} />
 					</ButtonGroup>
-					<RetryButton />
+					<RetryButton onClick={handleRetryButtonClick} />
 				</ButtonWrapper>
 				<InfoWrapper>
 					<img src={arrowThree} alt="데코 화살표" className="arrow" />
