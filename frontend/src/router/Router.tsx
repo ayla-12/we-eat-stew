@@ -3,24 +3,26 @@ import Home from '@/pages/home/Home';
 import Loading from '@/pages/loading/Loading';
 import Result from '@/pages/result/Result';
 import { PATH } from '@/router/path.ts';
-import { createBrowserRouter } from 'react-router-dom';
+import { createBrowserRouter, Navigate } from 'react-router-dom';
 
-export const router = createBrowserRouter([
-	{
-		path: PATH.HOME,
-		element: <Home />,
-	},
-	{
-		path: PATH.WISH,
-		element: <Wish />,
-	},
-	{
-		path: PATH.LOADING,
-		element: <Loading />,
-	},
-	{
-		// 동적 경로 설정
-		path: `${PATH.RESULT}/:id`,
-		element: <Result />,
-	},
+// /loading 경로로 접근하면 /로 리다이렉트
+const router = createBrowserRouter([
+  {
+    path: PATH.HOME,
+    element: <Home />,
+  },
+  {
+    path: PATH.WISH,
+    element: <Wish />,
+  },
+  {
+    path: PATH.LOADING,
+    element: <Navigate to={PATH.HOME} />, // /loading으로 접근하면 /로 리다이렉트
+  },
+  {
+    path: `${PATH.RESULT}/:id`,
+    element: <Result />,
+  },
 ]);
+
+export default router;

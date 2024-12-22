@@ -17,33 +17,30 @@ const Wish = () => {
 	const handleButtonClick = async () => {
 		console.log('Current wish:', wish); // 값 확인
 		if (!wish.trim()) {
-			alert('소원을 입력해주세요!');
-			return;
+		  alert('소원을 입력해주세요!');
+		  return;
 		}
-
+	  
 		try {
-			const matchedCategory = await matchCategory(wish);
-			const categoryValue = matchedCategory.category;
-
-			if (typeof categoryValue !== 'string') {
-				console.error('Category is not a string:', categoryValue);
-				alert('잘못된 카테고리입니다.');
-				return;
-			}
-
-			if (name.trim().length > 0 && name.trim().length <= 10) {
-				localStorage.setItem('nickname', name); // 로컬스토리지에 이름 저장
-				console.log('Navigating to loading with category:', categoryValue);
-
-				navigate('/loading', { state: { category: categoryValue } }); // 다음 페이지로 이동
-			} else {
-				alert('이름은 1글자 이상, 10글자 이내로 입력해주세요.');
-			}
+		  const matchedCategory = await matchCategory(wish);
+		  const categoryValue = matchedCategory.category;
+	  
+	  
+		  if (name.trim().length > 0 && name.trim().length <= 10) {
+			localStorage.setItem('nickname', name); // 로컬스토리지에 이름 저장
+			console.log('Navigating to loading with category:', categoryValue);
+	  
+			// 로딩 페이지로 상태 전달
+			navigate('/loading', { state: { category: categoryValue } }); // 다음 페이지로 이동
+		  } else {
+			alert('이름은 1글자 이상, 10글자 이내로 입력해주세요.');
+		  }
 		} catch (error) {
-			console.error('Error matching category:', error);
-			alert('카테고리를 매칭하는 중 오류가 발생했습니다. 다시 시도해주세요.');
+		  console.error('Error matching category:', error);
+		  alert('곡을 고르는 중 오류가 발생했어요. 다시 시도해주세요.');
 		}
-	};
+	  };
+	  
 
 	const handleNameChange = (value: string) => {
 		setName(value);
