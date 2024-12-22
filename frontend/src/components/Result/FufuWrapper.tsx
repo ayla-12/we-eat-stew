@@ -13,6 +13,7 @@ import {
 	fufu12,
 	fufu13,
 	fufu14,
+	listeningFufu,
 } from '@/assets/img';
 import { flexCssGenerator } from '@/styles/customStyle.ts';
 import styled from 'styled-components';
@@ -41,13 +42,8 @@ const fufuImages: Record<string, string> = {
 
 const FufuWrapper = ({ category }: fufuProps) => {
 	// 매핑 객체에서 카테고리에 맞는 이미지를 가져옴
-	const imageSrc = fufuImages[category];
+	const imageSrc = fufuImages[category] || listeningFufu;
 
-	// 카테고리에 해당하는 이미지가 없을 경우 기본 이미지 처리
-	if (!imageSrc) {
-		console.error(`Invalid category: ${category}`);
-		return null; // 이미지가 없으면 렌더링하지 않음
-	}
 	return (
 		<Fufu>
 			<img src={imageSrc} alt="푸푸 이미지" />
@@ -62,8 +58,8 @@ const Fufu = styled.div`
 	${flexCssGenerator('flex', 'center', 'center', 'column')}
 
 	img {
-		width: 28rem;
+		width: auto;
 		height: 20rem;
-		object-fit: cover;
+		object-fit: contain;
 	}
 `;

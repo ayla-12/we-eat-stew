@@ -38,6 +38,7 @@ const GlobalStyle = createGlobalStyle`
     align-items: center;
     scroll-behavior: smooth;
     background-color: ${({ theme }) => theme.colors.lightyellow};
+    overflow-x: hidden;
   }
 
   a {
