@@ -459,15 +459,7 @@ Oh 내가 하고 싶은 거 다 하면서
 			timestamp: 70.0,
 			link: 'https://youtu.be/1nV5oaS9V-I?si=inwLJdTZ00lXyw1H',
 		},
-		{
-			id: 1000024,
-			title: '기다릴게',
-			artist: 'PLAVE',
-			lyrics: `약속을 할게 두 번 다시 네 손
-놓지 않을 거라고`,
-			timestamp: 172.0,
-			link: 'https://www.youtube.com/watch?v=cFm8fTRW_so',
-		},
+
 		{
 			id: 1000025,
 			title: '포도 형제들',
@@ -477,24 +469,7 @@ Oh 내가 하고 싶은 거 다 하면서
 			timestamp: 12.0,
 			link: 'https://youtu.be/FVaIwsVAoAc?si=tvQ7Ueku4b6Lnyws',
 		},
-		{
-			id: 1000026,
-			title: 'One Kiss',
-			artist: 'RIIZE',
-			lyrics: `넌 내 세상에 유일한
-늘 변치 않을 사랑인 걸`,
-			timestamp: 159.0,
-			link: 'https://youtu.be/46dquyaoe_c?si=FN9i-faM9CeFCxdC',
-		},
-		{
-			id: 1000027,
-			title: 'Oh Little Girl',
-			artist: '슬레이트',
-			lyrics: `운명보다 더 운명같은 널
-넌 내가 지킨다`,
-			timestamp: 70.0,
-			link: 'https://youtu.be/_8hRahdOZ5Y?si=Y4E3opHgtbI1mkHV',
-		},
+
 		{
 			id: 1000028,
 			title: '토끼와 거북이',
@@ -512,15 +487,6 @@ Oh 내가 하고 싶은 거 다 하면서
 One Way One Way One Way Ticket`,
 			timestamp: 54.0,
 			link: 'https://youtu.be/Hd1dMS3jybk?si=qKs2mT2vONLC01hP',
-		},
-		{
-			id: 1000030,
-			title: '사랑쪽지 (Love Letter)',
-			artist: '세븐틴',
-			lyrics: `널 꽉 안아 놓지 않을게
-늘 네 옆에 있어줄게`,
-			timestamp: 50.0,
-			link: 'https://youtu.be/fJquWD13T0I?si=KAA8MApqxpD8La90',
 		},
 		{
 			id: 1000031,
@@ -694,7 +660,7 @@ So 다 같이 뛰어놀자 한바탕 미쳐보자`,
 		{
 			id: 1000212,
 			title: '행복은 늘 가까이에 있어',
-			artist: '볼빨간사춘기 외 8팀',
+			artist: '볼빨간사춘기, 바닐라 어쿠스틱, 스웨덴세탁소, 스무살, 레터 플로우, 김지수, WH3N, 보라미유, 최유리',
 			lyrics: `누구나 행복은 항상
 가까이에 있다는 거`,
 			timestamp: 114.0,
@@ -2107,6 +2073,24 @@ baby 일하지마 돈벌어 돈벌어 돈벌어 돈벌어`,
 	],
 	love: [
 		{
+			id: 1000026,
+			title: 'One Kiss',
+			artist: 'RIIZE',
+			lyrics: `넌 내 세상에 유일한
+늘 변치 않을 사랑인 걸`,
+			timestamp: 159.0,
+			link: 'https://youtu.be/46dquyaoe_c?si=FN9i-faM9CeFCxdC',
+		},
+		{
+			id: 1000024,
+			title: '기다릴게',
+			artist: 'PLAVE',
+			lyrics: `약속을 할게 두 번 다시 네 손
+놓지 않을 거라고`,
+			timestamp: 172.0,
+			link: 'https://www.youtube.com/watch?v=cFm8fTRW_so',
+		},
+		{
 			id: 2000201,
 			title: 'Steady',
 			artist: 'NCT WISH',
@@ -2141,6 +2125,24 @@ baby 일하지마 돈벌어 돈벌어 돈벌어 돈벌어`,
 날 알아보고 날 믿어주는 너와의 모든 지금`,
 			timestamp: 35,
 			link: 'https://youtu.be/YLxEK0ZKx9A?si=hjkm9sHez7fxtngJ',
+		},
+		{
+			id: 1000027,
+			title: 'Oh Little Girl',
+			artist: '슬레이트',
+			lyrics: `운명보다 더 운명같은 널
+넌 내가 지킨다`,
+			timestamp: 70.0,
+			link: 'https://youtu.be/_8hRahdOZ5Y?si=Y4E3opHgtbI1mkHV',
+		},
+		{
+			id: 1000030,
+			title: '사랑쪽지 (Love Letter)',
+			artist: '세븐틴',
+			lyrics: `널 꽉 안아 놓지 않을게
+늘 네 옆에 있어줄게`,
+			timestamp: 50.0,
+			link: 'https://youtu.be/fJquWD13T0I?si=KAA8MApqxpD8La90',
 		},
 		{
 			id: 2000001,
@@ -2178,7 +2180,7 @@ baby 일하지마 돈벌어 돈벌어 돈벌어 돈벌어`,
 			timestamp: 96.0,
 			link: 'https://youtu.be/lVGgXJEOIhc?si=GoFV46tljPNV_MvP',
 		},
- 		{
+		{
 			id: 2000006,
 			title: '나의 X에게',
 			artist: '경서',
