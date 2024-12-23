@@ -17,11 +17,3 @@ export const matchCategory = async (wish: string): Promise< {category : string }
     throw new Error('Failed to match category');
   }
 };
-
-
-// const matchCategory = async (wish: string) => {
-//   const response = await axios.post('http://localhost:3000/api/match-category', {
-//     wish,
-//   });
-//   return response.data;
-// };
