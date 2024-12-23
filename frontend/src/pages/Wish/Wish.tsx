@@ -15,7 +15,6 @@ const Wish = () => {
 	const navigate = useNavigate(); // useNavigate 훅 사용
 
 	const handleButtonClick = async () => {
-		console.log('Current wish:', wish); // 값 확인
 		if (!wish.trim()) {
 		  alert('소원을 입력해주세요!');
 		  return;
@@ -28,7 +27,6 @@ const Wish = () => {
 	  
 		  if (name.trim().length > 0 && name.trim().length <= 10) {
 			localStorage.setItem('nickname', name); // 로컬스토리지에 이름 저장
-			console.log('Navigating to loading with category:', categoryValue);
 	  
 			// 로딩 페이지로 상태 전달
 			navigate('/loading', { state: { category: categoryValue } }); // 다음 페이지로 이동
