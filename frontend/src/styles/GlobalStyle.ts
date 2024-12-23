@@ -65,6 +65,14 @@ const GlobalStyle = createGlobalStyle`
   ::-webkit-scrollbar {
     display: none;
   }
+
+  img {
+  -webkit-user-drag: none;  /* 드래그 방지 (Webkit 브라우저) */
+  -webkit-user-select: none;  /* 이미지 선택 방지 */
+  user-select: none;          /* 이미지 선택 방지 */
+  pointer-events: none;     /* 클릭 방지 (이미지 클릭을 막음) */
+ }
+
 `;
 
 export default GlobalStyle;
