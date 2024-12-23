@@ -2,7 +2,6 @@
 import axios from 'axios';
 
 const API_BASE_URL = 'https://we-eat-stew.com'; // 백엔드 API 주소
-console.log(API_BASE_URL); 
 
 /**
  * 소원을 서버로 전송하여 카테고리 매칭 요청

@@ -47,12 +47,14 @@ import fufu11 from './fufu/fufu11.png';
 import fufu12 from './fufu/fufu12.png';
 import fufu13 from './fufu/fufu13.png';
 import fufu14 from './fufu/fufu14.png';
+import fufuDefault from './fufu/fufu_default.png';
 import listeningFufu from './fufu/fufu_png.png';
 import homeHeader from './header/home_header.png';
 import loadingHeader from './header/loading_header.png';
 import resultHeader from './header/resultHeader.png';
 
 export {
+	fufuDefault,
 	retryButtonDefault,
 	retryButtonSelected,
 	archiveButtonDefault,

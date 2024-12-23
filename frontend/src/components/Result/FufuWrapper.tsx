@@ -13,7 +13,7 @@ import {
 	fufu12,
 	fufu13,
 	fufu14,
-	listeningFufu,
+	fufuDefault,
 } from '@/assets/img';
 import { flexCssGenerator } from '@/styles/customStyle.ts';
 import styled from 'styled-components';
@@ -42,7 +42,7 @@ const fufuImages: Record<string, string> = {
 
 const FufuWrapper = ({ category }: fufuProps) => {
 	// 매핑 객체에서 카테고리에 맞는 이미지를 가져옴
-	const imageSrc = fufuImages[category] || listeningFufu;
+	const imageSrc = fufuImages[category] || fufuDefault;
 
 	return (
 		<Fufu>
@@ -58,7 +58,7 @@ const Fufu = styled.div`
 	${flexCssGenerator('flex', 'center', 'center', 'column')}
 
 	img {
-		width: auto;
+		width: 28rem;
 		height: 20rem;
 		object-fit: contain;
 	}
