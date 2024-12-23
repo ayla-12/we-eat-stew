@@ -2,13 +2,17 @@
 import green2025 from './2025/2025_green.png';
 import pink2025 from './2025/2025_pink.png';
 import red2025 from './2025/2025_red.png';
+import yellow2025 from './2025/2025_yellow.png';
 import homeBackgroundImage from './background/HOME_background.png';
 import loadingBackgroundImage from './background/Loading_background.png';
 import resultSaveBackground from './background/Result_background.png';
 import wishBackgroundImage from './background/WISH_background.png';
+import errorBackground from './background/error_background.png';
 import resultBottomBackground from './background/resultBottom_background.png';
 import archiveButtonDefault from './button/archive_button_default.png';
 import archiveButtonSelected from './button/archive_button_selected.png';
+import homeButtonDefault from './button/home_button_default.png';
+import homeButtonSelected from './button/home_button_selected.png';
 import instaButtonDefault from './button/insta_button_default.png';
 import instaButtonSelected from './button/insta_button_selected.png';
 import listenButtonDefault from './button/listen_button_default.png';
@@ -48,12 +52,18 @@ import fufu12 from './fufu/fufu12.png';
 import fufu13 from './fufu/fufu13.png';
 import fufu14 from './fufu/fufu14.png';
 import fufuDefault from './fufu/fufu_default.png';
+import fufuError from './fufu/fufu_error.png';
 import listeningFufu from './fufu/fufu_png.png';
 import homeHeader from './header/home_header.png';
 import loadingHeader from './header/loading_header.png';
 import resultHeader from './header/resultHeader.png';
 
 export {
+	homeButtonDefault,
+	homeButtonSelected,
+	fufuError,
+	errorBackground,
+	yellow2025,
 	fufuDefault,
 	retryButtonDefault,
 	retryButtonSelected,

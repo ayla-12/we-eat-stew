@@ -1,3 +1,4 @@
+import ErrorBoundary from './components/error/ErrorBoundary';
 import router from '@/router/Router.tsx';
 import GlobalStyle from '@/styles/GlobalStyle';
 import theme from '@/styles/theme';
@@ -6,10 +7,12 @@ import { ThemeProvider } from 'styled-components';
 
 function App() {
 	return (
-		<ThemeProvider theme={theme}>
-			<GlobalStyle />
-			<RouterProvider router={router} />
-		</ThemeProvider>
+		<ErrorBoundary>
+			<ThemeProvider theme={theme}>
+				<GlobalStyle />
+				<RouterProvider router={router} />
+			</ThemeProvider>
+		</ErrorBoundary>
 	);
 }
 
