@@ -30,14 +30,51 @@ export interface Category {
 const categories: Category = {
 	challenge: [
 		{
-			"id": 3000036,
-			"title": "빛을 따라서",
-			"artist": "첫사랑(CSR)",
-			"lyrics": `Shining bright 태양보다 밝게 빛나 높이 날아가
+			id: 1000234,
+			title: 'Celebrity',
+			artist: '아이유',
+			lyrics: `잊지마 넌 흐린 어둠 사이 왼손으로 그린 별 하나
+보이니 그 유일함이 얼마나 아름다운지 말야`,
+			timestamp: 40.0,
+			link: 'https://youtu.be/ZThVobEtp_o?si=JzZXgBaivVBoxoPr',
+		},
+		{
+			id: 1000194,
+			title: 'Surf',
+			artist: '하이라이트',
+			lyrics: `한번도 해본 적 없어 잘 해낼 수 있을까 두렵다 해
+그래도 괜찮아 내가 있으니까 어서 뛰어들자`,
+			timestamp: 0.0,
+			link: 'https://youtu.be/jMeWMz6YEds?si=hKqdZdfeo_gsZWQr',
+		},
+		{
+			id: 1000191,
+			title: 'STEP',
+			artist: '카라',
+			lyrics: `Step it up step it up 다시 시작이야
+또 템포를 올려서 앞질러 갈래`,
+			timestamp: 49.0,
+			link: 'https://youtu.be/KLrcpz2p6UQ?si=ErC99uvNU04ktdTX',
+		},
+		{
+			id: 1000188,
+			title: 'N.O',
+			artist: '방탄소년단',
+			lyrics: `Everybody say NO!
+더는 나중이란 말로 안돼 
+더는 남의 꿈에 갇혀 살지 마`,
+			timestamp: 64.0,
+			link: 'https://youtu.be/vHTeiTSfDnw?si=rSsZtqQvJHp8-lVN',
+		},
+		{
+			id: 3000036,
+			title: '빛을 따라서',
+			artist: '첫사랑(CSR)',
+			lyrics: `Shining bright 태양보다 밝게 빛나 높이 날아가
 손을 잡고 크게 소리쳐, 망설일 필요 없어 달려`,
-			"timestamp": 44.0,
-			"link": "https://youtu.be/XF_23xq5Kv8?si=ClhaWQzv6gLo7v_f"
-		  },
+			timestamp: 44.0,
+			link: 'https://youtu.be/XF_23xq5Kv8?si=ClhaWQzv6gLo7v_f',
+		},
 		{
 			id: 3000033,
 			title: 'Wow Thing',
@@ -283,16 +320,6 @@ Beyond the road 껍질을 깨뜨려버리자`,
 			link: 'https://youtu.be/a-UfQfufkgU?si=ckD8ZoagFzl9hTlE',
 		},
 		{
-			id: 1000050,
-			title: 'Day after day',
-			artist: 'NELL',
-			lyrics: `분명 쉽진 않겠지
-단 한 번도 그럴 거라고 생각한 적 없어
-매 순간순간이 고비겠지 그래도 달려갈 테니`,
-			timestamp: 40.0,
-			link: 'https://www.youtube.com/watch?v=c18xcQMVK9Q',
-		},
-		{
 			id: 1000051,
 			title: 'Wave',
 			artist: '에이티즈',
@@ -450,16 +477,6 @@ Oh 내가 하고 싶은 거 다 하면서
 			link: 'https://www.youtube.com/watch?v=-gZC9hC1PDQ',
 		},
 		{
-			id: 1000188,
-			title: 'N.O',
-			artist: '방탄소년단',
-			lyrics: `Everybody say NO!
-더는 나중이란 말로 안돼 
-더는 남의 꿈에 갇혀 살지 마`,
-			timestamp: 64.0,
-			link: 'https://youtu.be/vHTeiTSfDnw?si=rSsZtqQvJHp8-lVN',
-		},
-		{
 			id: 1000189,
 			title: 'Prologue',
 			artist: '에스파',
@@ -467,24 +484,6 @@ Oh 내가 하고 싶은 거 다 하면서
 오직 나만의 속도로 흐름대로 가`,
 			timestamp: 158.0,
 			link: 'https://www.youtube.com/watch?v=P8Zd56wknlk',
-		},
-		{
-			id: 1000190,
-			title: 'Generation',
-			artist: '트리플에스',
-			lyrics: `여기에서 together 무질서한 그대로
-데카당스 이곳으로 날 던져 Generation`,
-			timestamp: 81.0,
-			link: 'https://youtu.be/GpLM6eLLnN4?si=1MASEwfskHlTHzY5',
-		},
-		{
-			id: 1000191,
-			title: 'STEP',
-			artist: '카라',
-			lyrics: `Step it up step it up 다시 시작이야
-또 템포를 올려서 앞질러 갈래`,
-			timestamp: 49.0,
-			link: 'https://youtu.be/KLrcpz2p6UQ?si=ErC99uvNU04ktdTX',
 		},
 		{
 			id: 1000192,
@@ -503,15 +502,6 @@ Oh 내가 하고 싶은 거 다 하면서
 빛이 날 거야 차원이 다르게 Class is over`,
 			timestamp: 198.0,
 			link: 'https://youtu.be/M7b1vCEJ-bk?si=BR4uUnUCrp3RdmX3',
-		},
-		{
-			id: 1000194,
-			title: 'Surf',
-			artist: '하이라이트',
-			lyrics: `한번도 해본 적 없어 잘 해낼 수 있을까 두렵다 해
-그래도 괜찮아 내가 있으니까 어서 뛰어들자`,
-			timestamp: 0.0,
-			link: 'https://youtu.be/jMeWMz6YEds?si=hKqdZdfeo_gsZWQr',
 		},
 		{
 			id: 2000195,
@@ -577,16 +567,6 @@ Oh 내가 하고 싶은 거 다 하면서
 			timestamp: 12.0,
 			link: 'https://youtu.be/FVaIwsVAoAc?si=tvQ7Ueku4b6Lnyws',
 		},
-
-		{
-			id: 1000028,
-			title: '토끼와 거북이',
-			artist: 'Stray Kids',
-			lyrics: `뭐 잘 모르겠지만 빠른 게 좋잖니
-가라고 가라고 가라고 가라고`,
-			timestamp: 91.0,
-			link: 'https://www.youtube.com/watch?v=BJT4IhFDWSI&pp=ygUT7Yag64G87JmAIOqxsOu2geydtA%3D%3D',
-		},
 		{
 			id: 1000029,
 			title: '티켓 (TICKET)',
@@ -595,15 +575,6 @@ Oh 내가 하고 싶은 거 다 하면서
 One Way One Way One Way Ticket`,
 			timestamp: 54.0,
 			link: 'https://youtu.be/Hd1dMS3jybk?si=qKs2mT2vONLC01hP',
-		},
-		{
-			id: 1000031,
-			title: '덕질 (Call my name)',
-			artist: '선미',
-			lyrics: `딴 애들 몰라 넌 맨날 웃잖아
-괜찮아 내가 다 알아보잖아`,
-			timestamp: 78.0,
-			link: 'https://youtu.be/OnH8Dc9S3n4?si=b-UroPPxGAn1L8E-',
 		},
 	],
 	freedom: [
@@ -832,7 +803,7 @@ So 다 같이 뛰어놀자 한바탕 미쳐보자`,
 		},
 		{
 			id: 1000214,
-			title: '세가지 소원 Wish Tree',
+			title: '세가지 소원(Wish Tree)',
 			artist: '레드벨벳',
 			lyrics: `내 첫 번째 소원 너와 나 오늘처럼 행복하길
 두 번째 소원은 몇 번의 겨울 지나도 꼭 함께이길`,
@@ -847,15 +818,6 @@ So 다 같이 뛰어놀자 한바탕 미쳐보자`,
 사랑한단 말을 더 쉽게 하고 싶어`,
 			timestamp: 119.0,
 			link: 'https://youtu.be/NxzawQKdqzM?si=zW6Wb4n9wMjbdq-b',
-		},
-		{
-			id: 1000216,
-			title: 'Tree',
-			artist: '오월오일',
-			lyrics: `Tonight 아름다운 이 마음이 다 우리잖아
-I say 아 아아아아 같은 마음에 우리는 춤추잖아`,
-			timestamp: 67.0,
-			link: 'https://youtu.be/BuwE1zC7xg4?si=gj5jOYL9Zc_0ylWR',
 		},
 		{
 			id: 1000217,
@@ -1008,8 +970,7 @@ When this rain stops 그때 다시 웃으면 돼`,
 			id: 1000006,
 			title: 'NO PAIN',
 			artist: '실리카겔',
-			lyrics: `No pain, no fail
-음악 없는 세상`,
+			lyrics: `No pain, no fail`,
 			timestamp: 75.0,
 			link: 'https://youtu.be/U31mUH2DnWk?si=Q2fUOO68XHHR4ro7',
 		},
@@ -1324,7 +1285,8 @@ You can't do that!`,
 			title: '전사의 후예 (폭력시대)',
 			artist: 'H.O.T.',
 			lyrics: `그들은 나를 짓밟았어 하나 남은 꿈도 다 가져 갔어
-길을 찾아 봤어 아무데도 없어 이제 내가 나를 벌하겠어`,
+길을 찾아 봤어 아무데도 없어
+이제 내가 나를 벌하겠어`,
 			timestamp: 30.0,
 			link: 'https://youtu.be/RpGTUmISOyg?si=Rik6yYCDC8rbuKy3',
 		},
@@ -1462,15 +1424,6 @@ You can't do that!`,
 			link: 'https://www.youtube.com/watch?v=U6dTSMCqlp4',
 		},
 		{
-			id: 1000231,
-			title: 'Miracle (기적은 너와 내가 함께하는 순간마다 일어나고 있어)',
-			artist: '투모로우바이투게더',
-			lyrics: `두 눈을 감아야 보이는 Tomorrow
-One, two, three 셋 세면 펼쳐져`,
-			timestamp: 85.0,
-			link: 'https://www.youtube.com/watch?v=p24jpQrMh98',
-		},
-		{
 			id: 1000232,
 			title: 'Clover',
 			artist: '더보이즈',
@@ -1487,15 +1440,6 @@ One, two, three 셋 세면 펼쳐져`,
 온몸에 심장이 뛰어`,
 			timestamp: 85.0,
 			link: 'https://youtu.be/Kevp2lFKSOg?si=EUCwIhXQcj9jAXQu',
-		},
-		{
-			id: 1000234,
-			title: 'Celebrity',
-			artist: '아이유',
-			lyrics: `잊지마 넌 흐린 어둠 사이 왼손으로 그린 별 하나
-보이니 그 유일함이 얼마나 아름다운지 말야`,
-			timestamp: 40.0,
-			link: 'https://youtu.be/ZThVobEtp_o?si=JzZXgBaivVBoxoPr',
 		},
 		{
 			id: 1000235,
@@ -1784,15 +1728,6 @@ Everything's gonna be alright`,
 			link: 'https://www.youtube.com/watch?v=fqvo78Gpxtc&pp=ygUW64KY7IOB7ZiE7JSo67C065OcIOq4uA%3D%3D',
 		},
 		{
-			id: 1000206,
-			title: '반딧불',
-			artist: '도영',
-			lyrics: `이 빛을 내 숨을 다 쏟아내면
-내 작은 달이 저 별을 꼭 닮아있기를`,
-			timestamp: 54.0,
-			link: 'https://youtu.be/JkMxWSMJeG4?si=rhxGBxQHz_Vt43I0',
-		},
-		{
 			id: 1000207,
 			title: 'Ride Or Die',
 			artist: '카이',
@@ -1821,6 +1756,15 @@ Everything's gonna be alright`,
 		},
 	],
 	success: [
+		{
+			id: 1000231,
+			title: 'Miracle (기적은 너와 내가 함께하는 순간마다 일어나고 있어)',
+			artist: '투모로우바이투게더',
+			lyrics: `두 눈을 감아야 보이는 Tomorrow
+One, two, three 셋 세면 펼쳐져`,
+			timestamp: 85.0,
+			link: 'https://www.youtube.com/watch?v=p24jpQrMh98',
+		},
 		{
 			id: 3000025,
 			title: '승전가',
@@ -1935,15 +1879,6 @@ I need a diamond ring 모만이 나의 길
 			link: 'https://www.youtube.com/watch?v=MRLViFfWZZk',
 		},
 		{
-			id: 1000110,
-			title: 'Cinema',
-			artist: 'CIX',
-			lyrics: `가끔은 불안하고 또 때로는 흔들려도
-그조차 한편의 영화가 될 거야`,
-			timestamp: 46.0,
-			link: 'https://youtu.be/kvVXB76eRvQ?si=hD1sREi_zzaDRXAs',
-		},
-		{
 			id: 1000111,
 			title: '오리 날다',
 			artist: '체리필터',
@@ -1980,15 +1915,6 @@ We go up uh uh uh go up
 We go up uh we go up`,
 			timestamp: 52.0,
 			link: 'https://youtu.be/LV1Es22E0RI?si=nE_dQGdS1Ej05isH',
-		},
-		{
-			id: 1000115,
-			title: '불티',
-			artist: '태연',
-			lyrics: `이제 타이밍이야, 너의 시간이야
-숨을 불어넣어 불티를 깨워`,
-			timestamp: 111.0,
-			link: 'https://youtu.be/CinJhZF5ZuA?si=GFkSgkr5Pg9TwzmR',
 		},
 		{
 			id: 1000116,
@@ -2165,15 +2091,6 @@ We go up uh we go up`,
 			link: 'https://youtu.be/INLFlN-PZq4?si=LsLE0QzyczHLi9CN',
 		},
 		{
-			id: 1000129,
-			title: '월드투어',
-			artist: '보수동쿨러, 해서웨이',
-			lyrics: `우린 어디에 있어도
-다정한 친구가 되는 거야`,
-			timestamp: 149.0,
-			link: 'https://youtu.be/3d-QZBwMMq8?si=hZJlpYlf_yc5O2cc',
-		},
-		{
 			id: 1000130,
 			title: '출발',
 			artist: '김동률',
@@ -2208,15 +2125,6 @@ We go up uh we go up`,
 발을 맞춰 달려가다 보면 수평선 저 너머가 보여`,
 			timestamp: 40.0,
 			link: 'https://youtu.be/gzqjH8pu3l0?si=HtxKa661qWJ7-x8U',
-		},
-		{
-			id: 1000134,
-			title: '지구별 여행자 (Traveller)',
-			artist: 'EPEX',
-			lyrics: `세상의 많고 많은 점 중에
-너와 나만 이은 채 보고 느껴본 적 없는 것들을 배워`,
-			timestamp: 44.0,
-			link: 'https://youtu.be/AyTbLMX0MvE?feature=shared',
 		},
 	],
 	rich: [
@@ -2452,7 +2360,7 @@ baby 일하지마 돈벌어 돈벌어 돈벌어 돈벌어`,
 			title: '서툴러',
 			artist: '나상현씨밴드',
 			lyrics: `우린 아직 많이 서툴러 상처도 많지만
-			서로의 사랑이 돼주자`,
+서로의 사랑이 돼주자`,
 			timestamp: 167.0,
 			link: 'https://youtu.be/NImGyVCGKWs?si=5wcj0xbhTEVe9oP2',
 		},
@@ -2584,15 +2492,6 @@ It’s our dream sweet melody`,
 			link: 'https://youtu.be/lmQVD54OWjE?si=75vUGIpToUoNHMIX',
 		},
 		{
-			id: 2000022,
-			title: '7시에 들어줘 (feat.Peder Elias)',
-			artist: '부석순',
-			lyrics: `긴 긴 하루 지나 우리 둘이 만나
-농담거리에 지친 하루를 한잔`,
-			timestamp: 79.0,
-			link: 'https://youtu.be/95msATLBBHg?si=aDv9z5sAObq8DWYL',
-		},
-		{
 			id: 2000023,
 			title: 'Valentine',
 			artist: 'POW',
@@ -2600,24 +2499,6 @@ It’s our dream sweet melody`,
 굳이 너여야만 하는 그 막연함을 말해줄게`,
 			timestamp: 14.0,
 			link: 'https://youtu.be/rP5dGwNb398?si=k1N2t0PwLds-jWTc',
-		},
-		{
-			id: 2000024,
-			title: '숲',
-			artist: '최유리',
-			lyrics: `난 저기 숲이 돼볼래
-나의 옷이 다 눈물에 젖는대도`,
-			timestamp: 104.0,
-			link: 'https://youtu.be/8kQH_bBMrMQ?si=cSGq1baHnz2p7MGc',
-		},
-		{
-			id: 2000025,
-			title: 'UR',
-			artist: '태연',
-			lyrics: `Cause you are 내게 내린 빛과
-You are 너무 고운 꿈과`,
-			timestamp: 141.0,
-			link: 'https://youtu.be/woqRmrtVhgM?feature=shared',
 		},
 		{
 			id: 2000026,
