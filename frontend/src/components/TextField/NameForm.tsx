@@ -46,8 +46,7 @@ const TextInput = styled.input<{ exceedsLimit: boolean }>`
 	border: none;
 	outline: none;
 	background: transparent;
-	color: ${({ theme, exceedsLimit }) =>
-		exceedsLimit ? theme.colors.red : theme.colors.lightyellow}; // 글자 수 초과 시 빨간색
+	color: ${({ theme, exceedsLimit }) => exceedsLimit ? theme.colors.red : theme.colors.lightyellow}; // 글자 수 초과 시 빨간색
 	${({ theme }) => theme.fonts.Body};
 
 	::placeholder {

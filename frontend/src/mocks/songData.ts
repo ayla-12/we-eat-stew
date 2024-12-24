@@ -23,11 +23,110 @@ export interface Category {
 	luck: Song[];
 	challenge: Song[]; // 추가된 부분
 	love: Song[];
+	comfort: Song[];
 }
 
 // 목 데이터
 const categories: Category = {
 	challenge: [
+		{
+			"id": 3000036,
+			"title": "빛을 따라서",
+			"artist": "첫사랑(CSR)",
+			"lyrics": `Shining bright 태양보다 밝게 빛나 높이 날아가
+손을 잡고 크게 소리쳐, 망설일 필요 없어 달려`,
+			"timestamp": 44.0,
+			"link": "https://youtu.be/XF_23xq5Kv8?si=ClhaWQzv6gLo7v_f"
+		  },
+		{
+			id: 3000033,
+			title: 'Wow Thing',
+			artist: '소연, 슬기, 신비, 청하',
+			lyrics: `시작해 꿈꿔 왔던 날 만나게 될 wow thing
+전에 없던 날 만들어 줄 wow thing
+내가 있는 어디라도 멋진 wow wow thing`,
+			timestamp: 37.0,
+			link: 'https://youtu.be/KR5CtMLuiqQ?si=vdNaXNkfE6FragMB',
+		},
+		{
+			id: 3000032,
+			title: "I'm Ready",
+			artist: '청하',
+			lyrics: `I'm ready to get this, ready to get this
+Ready to get this stage
+그 누구든 test me 얼마든 chase me 두려울 건 없지`,
+			timestamp: 8.0,
+			link: 'https://youtu.be/jf0_fwHYAbE?si=z8XSE0DAM_QzKv61',
+		},
+		{
+			id: 3000027,
+			title: '쏘아 올려',
+			artist: '다크비',
+			lyrics: `쏘아올려 더 높이 날게
+그 날갯짓은 날 새롭게`,
+			timestamp: 59.0,
+			link: 'https://youtu.be/3C5GL4LA0m4?si=RXwXUNayCnByxm1G',
+		},
+		{
+			id: 3000022,
+			title: '파도혁명',
+			artist: '음율',
+			lyrics: `파란을 일으켜
+눈부신 널 보여줘
+이 바다를 집어삼키자`,
+			timestamp: 59.0,
+			link: 'https://youtu.be/SPniQOtoWis?si=7ikMIhJKeAfO3R64',
+		},
+		{
+			id: 3000020,
+			title: '계절의 시작은',
+			artist: '달담',
+			lyrics: '나의 시작은 이곳에서부터',
+			timestamp: 128.0,
+			link: 'https://youtu.be/JMhszuqSe6c?si=UmIGONI4f2idxqzA',
+		},
+		{
+			id: 3000018,
+			title: 'Opening',
+			artist: 'LUCY',
+			lyrics: '우리 이야기의 주인공은 우리니까',
+			timestamp: 110.0,
+			link: 'https://youtu.be/dqnYdGmspc4?si=kDy6XOuqj_4vsmcS',
+		},
+		{
+			id: 3000016,
+			title: '게릴라 (Guerilla)',
+			artist: '오마이걸',
+			lyrics: '낯설고 새로운걸 겁내본적은 없지',
+			timestamp: 103.0,
+			link: 'https://youtu.be/CBfJiyuHVPs?si=TXG1MPWf7vXfalF4',
+		},
+		{
+			id: 3000009,
+			title: 'Shoot It Out',
+			artist: '원위',
+			lyrics: `모든 선택이 최선이라 믿고
+다시 가던 길을 함께 걸어갈래`,
+			timestamp: 41.0,
+			link: 'https://youtu.be/f4m3FNAiU90?si=yHl_D4USLj_PoZD_',
+		},
+		{
+			id: 3000007,
+			title: '청사진',
+			artist: 'Stray Kids',
+			lyrics: `난 계속 멈추지 않고서 달려갈 걸
+절대 지치지 않고서 달려갈 걸`,
+			timestamp: 77.0,
+			link: 'https://youtu.be/r_G906iQID8?si=3KzKKkseK5zoZVva',
+		},
+		{
+			id: 3000005,
+			title: 'POP UP',
+			artist: 'Dragon Pony (드래곤포니)',
+			lyrics: `모든 게 다 잘 됐으면 좋겠어`,
+			timestamp: 92,
+			link: 'https://youtu.be/yc-eNqLjDMA?si=85ZN_gNT-TmrbktZ',
+		},
 		{
 			id: 1000032,
 			title: '듣기만 해도 성공하는 노래',
@@ -295,6 +394,15 @@ Beyond the road 껍질을 깨뜨려버리자`,
 	],
 	escape: [
 		{
+			id: 3000028,
+			title: 'New World',
+			artist: 'RESCENE (리센느)',
+			lyrics: `Let's go, 지금이야!
+Switch my world, 바꿀 time`,
+			timestamp: 38.0,
+			link: 'https://youtu.be/QNXeGm-Wkms?si=Jq0ecIs0WGUY7Tpn',
+		},
+		{
 			id: 1000183,
 			title: '도시탈출',
 			artist: '클론',
@@ -500,6 +608,16 @@ One Way One Way One Way Ticket`,
 	],
 	freedom: [
 		{
+			id: 3000031,
+			title: 'Sugarcoat (NATTY Solo)',
+			artist: 'KISS OF LIFE',
+			lyrics: `Sugarcoat 따윈 벗어 던진 날
+니가 뭐라든지
+Just move 내맘대로 날 위한 춤을 추지`,
+			timestamp: 43.0,
+			link: 'https://youtu.be/NaIRQ5v0914?si=QK1QTblqSLFG02TU',
+		},
+		{
 			id: 2000210,
 			title: '바람 (FREEDOM)',
 			artist: 'iKON',
@@ -629,7 +747,44 @@ So 다 같이 뛰어놀자 한바탕 미쳐보자`,
 	],
 	happiness: [
 		{
+			id: 3000021,
+			title: '좋지 아니한가',
+			artist: '유다빈밴드',
+			lyrics: `그래도 우린 좋지 아니한가
+바람에 흐를 세월 속에
+우리 같이 있지 않나`,
+			timestamp: 96.0,
+			link: 'https://youtu.be/VgXDw7wQWa8?si=y-joalEXY2hho8XS',
+		},
+		{
+			id: 3000013,
+			title: '안녕',
+			artist: '조이',
+			lyrics: `외로운 날들이여 모두 다 안녕
+내 마음속의 눈물들도 이제는 안녕`,
+			timestamp: 5.0,
+			link: 'https://youtu.be/ZzbNM2l-AAA?si=4jNmIk8fCkHLHPvG',
+		},
+		{
 			id: 3000001,
+			title: 'My Genesis (Übermensch)',
+			artist: '온앤오프',
+			lyrics: `난 사랑해 나의 모든 삶을
+난 창조해 나의 모든 자유`,
+			timestamp: 58.0,
+			link: 'https://youtu.be/0gvHGxwHMFw?si=DraUGELUGdeFNjYd',
+		},
+		{
+			id: 3000002,
+			title: '너를 사랑해',
+			artist: 'S.E.S.',
+			lyrics: `나는 행복해 다른 누구도
+난 부럽지 않아`,
+			timestamp: 75.0,
+			link: 'https://youtu.be/LKr3kSirJr4?si=AS-bb-6WS8Q8ooOm',
+		},
+		{
+			id: 3000006,
 			title: '꽃놀이',
 			artist: '청요일',
 			lyrics: `좋아하는 것이 가득하길
@@ -797,6 +952,14 @@ We'll be alright`,
 	],
 	health: [
 		{
+			id: 3000004,
+			title: '무적 (ONE)',
+			artist: 'DAY6',
+			lyrics: '절대 부서지지 않는 무적',
+			timestamp: 133.0,
+			link: 'https://youtu.be/aoTdW4GLtIQ?si=W8nqAasywLO_7foX',
+		},
+		{
 			id: 1000001,
 			title: '건강이 최고',
 			artist: '유애자',
@@ -880,6 +1043,14 @@ When this rain stops 그때 다시 웃으면 돼`,
 		},
 	],
 	impeachment: [
+		{
+			id: 3000014,
+			title: 'NO MERCY',
+			artist: 'B.A.P',
+			lyrics: '이제는 너그럽게 봐주지 않겠어',
+			timestamp: 193.0,
+			link: 'https://youtu.be/d5b1J0iSlfg?si=m5mJUxpyFezcMQMw',
+		},
 		{
 			id: 2000212,
 			title: 'JUSTICE',
@@ -1218,6 +1389,15 @@ You can't do that!`,
 	],
 	luck: [
 		{
+			id: 3000003,
+			title: 'Lucky',
+			artist: 'EXO',
+			lyrics: `참 행운이야, 참 다행이야
+세상에 당연한 건 없어`,
+			timestamp: 24.0,
+			link: 'https://youtu.be/lsrVF1J4emc?si=x1Kf8687jhOebhyu',
+		},
+		{
 			id: 2000222,
 			title: 'CLOVER',
 			artist: '프로미스나인',
@@ -1442,6 +1622,16 @@ You wake me up`,
 	],
 	study: [
 		{
+			id: 3000008,
+			title: 'unlucky',
+			artist: '아이유',
+			lyrics: `난 나의 보폭으로 갈게
+불안해 돌아보면서도
+별 큰일 없이 지나온 언제나처럼`,
+			timestamp: 178.0,
+			link: 'https://youtu.be/l5Rb1pNre40?si=y4vUfVS2-4P8vc8L',
+		},
+		{
 			id: 2000216,
 			title: '듣기만 해도 성공하는 노래',
 			artist: '조빈',
@@ -1631,6 +1821,46 @@ Everything's gonna be alright`,
 		},
 	],
 	success: [
+		{
+			id: 3000025,
+			title: '승전가',
+			artist: 'Stray Kids',
+			lyrics: '승자의 여유 얼굴에는 미소 씩',
+			timestamp: 47.0,
+			link: 'https://youtu.be/Fy3zu0WsTLM?si=2rL9ynxFl5BUSnft',
+		},
+		{
+			id: 3000019,
+			title: '청운',
+			artist: '달담',
+			lyrics: '파랑아 너의 색이 세상을 구할 거야',
+			timestamp: 202.0,
+			link: 'https://youtu.be/1nw7gSAW-Kc?si=47rnA1Sak25ryD88',
+		},
+		{
+			id: 3000017,
+			title: '작은별',
+			artist: 'LUCY',
+			lyrics: '지금 이 순간 누군가에겐\n내가 제일 빛나는 별이니까',
+			timestamp: 55.0,
+			link: 'https://youtu.be/bHhYNhIfTKg?si=sANBnBk6Z1gSCf8V',
+		},
+		{
+			id: 3000015,
+			title: 'Sexy, Free & Single',
+			artist: '슈퍼주니어',
+			lyrics: '가슴이 요동치는 승리를 맛 봐',
+			timestamp: 153.0,
+			link: 'https://youtu.be/ngOKfUi-jZg?si=pBncMpnv6cvpvzf8',
+		},
+		{
+			id: 3000010,
+			title: 'OFF ROAD',
+			artist: '원위',
+			lyrics: '우리가 가는 곳이 어디든 완벽해',
+			timestamp: 82.0,
+			link: 'https://youtu.be/dxTFxO9YS20?si=rLefacFql8bzagjN',
+		},
 		{
 			id: 1000102,
 			title: 'Airplane',
@@ -1843,6 +2073,25 @@ We go up uh we go up`,
 		},
 	],
 	trip: [
+		{
+			id: 3000030,
+			title: 'Vacation',
+			artist: '여자친구',
+			lyrics: `지구를 돌고 돌아 rotation
+기다려 왔어 너와 나의 vacation`,
+			timestamp: 65.0,
+			link: 'https://youtu.be/qCDmhZFarO8?si=H0PU8S6WdfqJjEr_',
+		},
+		{
+			id: 3000026,
+			title: '으쌰! 으쌰!',
+			artist: '신화',
+			lyrics: `이것저것 재보지 말고
+여행을 떠나봐
+기차를 타고 버스를 타고서 떠나자`,
+			timestamp: 113.0,
+			link: 'https://youtu.be/wnCZ0kRJRaQ?si=VG0kZvOAYZ1fWAhG',
+		},
 		{
 			id: 2000206,
 			title: 'Hitchhiker',
@@ -2072,6 +2321,15 @@ baby 일하지마 돈벌어 돈벌어 돈벌어 돈벌어`,
 		},
 	],
 	love: [
+		{
+			id: 3000023,
+			title: 'Pump Up The Volume!',
+			artist: 'PLAVE',
+			lyrics: `사랑해 말하지 못한 날 이젠 안녕,
+이렇게 전할래 내 맘`,
+			timestamp: 70.0,
+			link: 'https://youtu.be/EYG4ROejmyI?si=Sls5Q3J7vEcjI98u',
+		},
 		{
 			id: 1000026,
 			title: 'One Kiss',
@@ -2378,6 +2636,68 @@ You are 너무 고운 꿈과`,
 우리의 거리가 더 이상 멀어지지 않게`,
 			timestamp: 57.0,
 			link: 'https://youtu.be/s7rsXU1xCTQ?feature=shared',
+		},
+	],
+	comfort: [
+		{
+			id: 3000034,
+			title: 'Gonna Be Alright',
+			artist: 'VIXX',
+			lyrics: `Wherever you are, 위로가 되줄게
+I'm gonna be alright
+때론 슬픔이 우릴 덮쳐도 잊지 말아줘`,
+			timestamp: 29.0,
+			link: 'https://youtu.be/trvAP-TCZKw?si=cwrsgyhUvqHIVesW',
+		},
+		{
+			id: 3000035,
+			title: '걷고 있다',
+			artist: 'VIXX',
+			lyrics: `함께 걸어온 너에게 이야길 해주고 싶어
+잘했어 수고했어 고마워
+잘했어 수고했어 고마워라고`,
+			timestamp: 62.0,
+			link: 'https://youtu.be/0eSGW6xaWF4?si=D9xbZn3Wq2Nkhgjm',
+		},
+		{
+			id: 3000029,
+			title: '그런 날엔 (Someday)',
+			artist: '여자친구',
+			lyrics: `난 소중한 그댈 믿어요
+어떤 날 슬퍼진 그런 날엔
+그냥 한 번 웃어보는 거야`,
+			timestamp: 64.0,
+			link: 'https://youtu.be/BQitFgrYQZo?si=InCTahi2-k5qM2PN',
+		},
+		{
+			id: 3000024,
+			title: '괜찮아!',
+			artist: '드림캐쳐',
+			lyrics: `눈을 감고 나에게 말해줘
+괜찮아 괜찮아 이렇게
+So trust me`,
+			timestamp: 63.0,
+			link: 'https://youtu.be/aXFPbEdbe9M?si=JuzDOt9ybfx71Dqw',
+		},
+		{
+			id: 3000011,
+			title: '수고했어, 오늘도',
+			artist: '옥상달빛',
+			lyrics: `수고했어 오늘도 (수고했어)
+아무도 너의 슬픔에 관심없대도
+난 늘 응원해, 수고했어 오늘도`,
+			timestamp: 65.0,
+			link: 'https://www.youtube.com/watch?v=U3e4AOd-DzE',
+		},
+		{
+			id: 3000012,
+			title: '괜찮아도 괜찮아',
+			artist: '도경수',
+			lyrics: `늘 같은 속도로 흘러가는 시간이
+언제나 그랬듯이 씻어내 줄 테니
+흐르듯 살아도 그냥 괜찮아 괜찮아도`,
+			timestamp: 207.0,
+			link: 'https://youtube.com/watch?v=fl80JQQv0pU&si=gUa1tE5VzGLIisiN',
 		},
 	],
 };
