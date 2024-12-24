@@ -52,7 +52,7 @@ const Result = () => {
 	};
 	const handleSharedButtonClick = async () => {
 		// 초기 화면 링크로 공유하려면 URL을 고정
-		const text = `stew!와 함께하는 ${nickname}의 새해 첫곡은?\n\n<${songData?.title}> - ${songData?.artist}!\n\n나도 해볼까?\n⬇️⬇️⬇️\n\n\nhttps://play-your-wish.vercel.app/`;
+		const text = `2025년 모든 목표를 이룰 ${nickname}의 새해 첫곡은?\n\n${songData?.artist}의 <${songData?.title}>\n나만의 새해 첫 곡 추천 받으러 가기\n⬇️⬇️⬇️\nhttps://play-your-wish.vercel.app/\n#Play_Your_Wish`;
 		const title = 'stew!와 함께하는 2025 새해 첫 곡';
 
 		// saveWrapper의 영역을 이미지로 저장
@@ -185,6 +185,7 @@ const HeaderWrapper = styled.div`
 const ContentsWrapper = styled.div`
 	${flexCssGenerator('flex', '', '', 'column')}
 	width: 37.5rem;
+	margin-top: 1.3rem;
 `;
 
 const TextWrapper = styled.div`

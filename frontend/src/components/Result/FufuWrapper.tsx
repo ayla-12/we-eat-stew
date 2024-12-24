@@ -38,6 +38,7 @@ const fufuImages: Record<string, string> = {
 	escape: fufu12,
 	happiness: fufu13,
 	success: fufu14,
+	comfort: fufu13,
 };
 
 const FufuWrapper = ({ category }: fufuProps) => {
