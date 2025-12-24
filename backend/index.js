@@ -48,7 +48,6 @@ app.post("/api/match-category", async (req, res) => {
             - health: 건강, 체력, 스트레스, 운동, 워라밸, 병원, 정신병, 정신, 아프지, 면역력, 식단, 영양, 마음건강, 건강검진, 비타민, 영양제, 다이어트
             - luck: 행운, 기회, 우연, 소원, 노력, 운명, 복, 기적, 영감
             - happiness: 행복, 즐거움, 소확행, 힐링, 감사, 외로움, 만족, 기쁨, 웃음
-            - impeachment: 탄핵, 반란, 내란, 내란수괴, 내란범, 물러나라, 윤석열, 대통령, 쿠데타, 하야, 처벌, 계엄, 부역자, 퇴진, 사퇴
 
             For example, if the user says "I want to achieve my dreams and grow as a person," you should respond with "success".
             you should only reply the category in this set - "love, marriage, success, challenge, freedom, rich, escape, trip, study, fandom, health, luck, happiness, impeachment"

@@ -62,7 +62,7 @@ const Wish = () => {
 					<NameForm name={name} onNameChange={handleNameChange} />
 				</NameFormWrapper>
 				<WishFormWrapper>
-					<h1>2025년에 이루고 싶은 것</h1>
+					<h1>2026년에 이루고 싶은 것</h1>
 					<WishForm wish={wish} onWishChange={handleWishChange} />
 				</WishFormWrapper>
 				<RecommendButton onClick={handleButtonClick} />
