@@ -9,7 +9,6 @@ export interface Song {
 }
 
 export interface Category {
-	impeachment: Song[];
 	health: Song[];
 	marriage: Song[];
 	success: Song[];
@@ -29,6 +28,45 @@ export interface Category {
 // 목 데이터
 const categories: Category = {
 	challenge: [
+				{
+			id: 2000213,
+			title: 'Next Level',
+			artist: '에스파',
+			lyrics: `저 너머의 문을 열어 Next level
+널 결국엔 내가 부셔 Next level`,
+			timestamp: 46,
+			link: 'https://www.youtube.com/watch?v=tkzYyEp4zB4',
+		},
+		{
+			id: 1000167,
+			title: 'New World',
+			artist: '에이티즈',
+			lyrics: `역사의 페이지를 바꾸지
+일어나 망설이지 말고`,
+			timestamp: 166.0,
+			link: 'https://youtu.be/9_xKGr2OPv0?si=dIchravqK-VzERvX',
+		},
+
+		{
+			id: 1000181,
+			title: 'Girls',
+			artist: '에스파',
+			lyrics: `혼돈 속에서 피어나 (We Them Girls)
+두려움에 맞설 그런 용기 (Ah Yeah)
+언제라도 우린 Together`,
+			timestamp: 69.0,
+			link: 'https://youtu.be/MBbqqWqLPlI?si=GrJCCeC0EEMMEk7S',
+		},
+		{
+			id: 1000182,
+			title: 'Girls',
+			artist: '에스파',
+			lyrics: `일어나라 그대여 더 치명적인 전쟁 속에
+두발로 버텨 적의 Hook! Black Mamba
+두렵지 않아 네가 Hoot! 부셔줄게`,
+			timestamp: 11.0,
+			link: 'https://youtu.be/MBbqqWqLPlI?si=GrJCCeC0EEMMEk7S',
+		},
 		{
 			id: 1000234,
 			title: 'Celebrity',
@@ -418,8 +456,134 @@ Beyond the road 껍질을 깨뜨려버리자`,
 			timestamp: 83.0,
 			link: 'https://youtu.be/S-fb0tMM7gc?feature=shared',
 		},
+		{
+    id: 4000000,
+    title: 'Sunkiss',
+    artist: '웬디',
+    lyrics: `때론 숨이 턱 끝까지 차올라도 거친 해일이 내 몸을 삼킨대도
+I don't give up 있는 힘껏 부딪힐래`,
+    timestamp: 97.0,
+    link: 'https://youtu.be/5PS2cJsSJrI?si=6-VoBbjrROG0Vyzq',
+  },
+  {
+    id: 4000001,
+    title: '꿈의 버스',
+    artist: '데이식스',
+    lyrics: `지금 꼭 움켜잡고 있는 이 버스 손잡이처럼
+흔들려도 비틀대도 꿈을 놓지 않을 거예요`,
+    timestamp: 76.0,
+    link: 'https://youtu.be/hZ6pts6e8dI?si=5tsxXr90GgQUMVw9',
+  },
+  {
+    id: 4000002,
+    title: '날아라! 드림라이더',
+    artist: '데이식스',
+    lyrics: `Fire!! 불을 뿜어 대는 드림라이더
+꿈과 희망이여 솟구쳐 하늘로`,
+    timestamp: 39.0,
+    link: 'https://youtu.be/CYj8d_2eD3U?si=ao76eUAaRBsmWNth',
+  },
+  {
+    id: 4000003,
+    title: '뛰어(JUMP)',
+    artist: 'BLACKPINK',
+    lyrics: `So come up with me,
+run up, uh, jump (뛰어)`,
+    timestamp: 134.0,
+    link: 'https://youtu.be/CgCVZdcKcqY?si=PaZIlmPEa-EDOfFx',
+  },
+  {
+    id: 4000004,
+    title: '언젠가 태양은 폭발해',
+    artist: 'KickFlip(킥플립)',
+    lyrics: `걱정 마 실수 뭐 그까짓 거 암것도 아냐
+We don’t give a ugh`,
+    timestamp: 52.0,
+    link: 'https://youtu.be/flb9ALt3fCQ?si=wt-nzbmefMSeBqrT',
+  },
+  {
+    id: 4000005,
+    title: 'How We KickFlip',
+    artist: 'KickFlip(킥플립)',
+    lyrics: `넘어져도 다시
+될 때까지 해보자고`,
+    timestamp: 57.0,
+    link: 'https://youtu.be/ZhvTrgAGrB0?si=KsQPERxe-8-mJlmq',
+  },
+  {
+    id: 4000006,
+    title: '새봄의 노래 (Beginning)',
+    artist: '도영',
+    lyrics: `새로이 불어오는 새봄의 바람
+부를게 바람 따라 더 퍼질 노래`,
+    timestamp: 20.0,
+    link: 'https://youtu.be/a5TheCP_T1Q?si=tBTFm-01_Dw2rPZj',
+  },
+  {
+    id: 4000007,
+    title: 'The Chase',
+    artist: '하츠투하츠',
+    lyrics: `내 맘대로 가고 싶어
+꿈은 시작됐어`,
+    timestamp: 158.0,
+    link: 'https://youtu.be/kxUA2wwYiME?si=8Czf_foRJySVGPBF',
+  },
+  {
+    id: 4000008,
+    title: '뛰어(JUMP)',
+    artist: 'BLACKPINK',
+    lyrics: `So come up with me I’ll take you high
+That prima donna spice up your life`,
+    timestamp: 47.0,
+    link: 'https://youtu.be/RUKqwwyAiEU?si=ow9mO-Zff2PgEgZt',
+  },
+  {
+    id: 4000009,
+    title: 'TUNNEL VISION',
+    artist: 'ITZY (있지)',
+    lyrics: `내 vision은 언제나 plus
+Celebrate I toast 피어난 꿈은 rose`,
+    timestamp: 123.0,
+    link: 'https://youtu.be/piSq8IioghU?si=tbuSZn37Co-zmL89',
+  },
+  {
+    id: 4000010,
+    title: 'FAMOUS',
+    artist: 'ALLDAY PROJECT',
+    lyrics: `비교 말어 걔넨 전부 구려
+똑같은 걸 해도 I do it better`,
+    timestamp: 104.0,
+    link: 'https://youtu.be/XYepTo2hnBQ?si=Shtoi8JbROFf7ZpV',
+  },
+  {
+    id: 4000011,
+    title: '마음따라 뛰는 건 멋지지 않아?',
+    artist: 'TWS (투어스)',
+    lyrics: `거칠어진 숨이 자꾸 뛰는 심장이
+하고 싶은 걸 따라가자 외치는 거야`,
+    timestamp: 0.0,
+    link: 'https://youtu.be/Csaj3X6PKxY?si=K-3xwMl11cm0W69b',
+  },
+  {
+    id: 4000012,
+    title: '청춘만화',
+    artist: '이무진',
+    lyrics: `이 세상에서 제일 높은 곳을 향해서
+뛰어오르자`,
+    timestamp: 245.0,
+    link: 'https://youtu.be/1bZNp9d7pLM?si=_zA7Zdw3DsZcCUcl',
+  },
 	],
 	escape: [
+		{
+			id: 1000147,
+			title: 'Sucker Punch!',
+			artist: 'Xdinary Heroes',
+			lyrics: `Feels like sucker punch, 더 세게 한 방 또 날려
+Sucker punch, 이 순간만을 기다린 듯이, pow`,
+			timestamp: 56.0,
+			link: 'https://www.youtube.com/watch?v=rdNLkQ5PlVQ',
+		},
 		{
 			id: 3000028,
 			title: 'New World',
@@ -576,8 +740,62 @@ One Way One Way One Way Ticket`,
 			timestamp: 54.0,
 			link: 'https://youtu.be/Hd1dMS3jybk?si=qKs2mT2vONLC01hP',
 		},
+		  {
+    id: 4000013,
+    title: 'Falling (Feat. Young K (DAY6))',
+    artist: 'WOODZ',
+    lyrics: `고민 고민 고민 고민 하나 없이
+내일에게 말할래 괜찮아졌으면 해`,
+    timestamp: 108.0,
+    link: 'https://youtu.be/2vKXjS8cNMY?si=_G0lTUIfbCrYqIJe',
+  },
+  {
+    id: 4000014,
+    title: 'Smashing Concrete',
+    artist: 'WOODZ',
+    lyrics: `몇 번이고 또 부딪혀가고
+내가 무너지나 봐`,
+    timestamp: 149.0,
+    link: 'https://youtu.be/im6Df9xTRno?si=WAaxXhYmwOY2KBN_',
+  },
+  {
+    id: 4000015,
+    title: '응 그래 (Umm Great)',
+    artist: 'KickFlip(킥플립)',
+    lyrics: `내 패기 안 꺾임
+힘들면 잠깐만 Run 하지 뭐`,
+    timestamp: 26.0,
+    link: 'https://youtu.be/L__ITOj-g8E?si=vIHPq8Ya_mUkdDKs',
+  },
+  {
+    id: 4000016,
+    title: 'Set Net G0?!',
+    artist: 'CRAVITY',
+    lyrics: `불이 붙은 감정 위를 달려 당장
+Pedal to the metal 나는 Battle to the level`,
+    timestamp: 98.0,
+    link: 'https://youtu.be/IV6yrrLyhCA?si=WC13lUSChly4S0zb',
+  },
 	],
 	freedom: [
+		{
+    id: 4000017,
+    title: 'Fly Up',
+    artist: 'RIIZE',
+    lyrics: `빛나는 꿈에 날개를 달아줘 이제 문을 열어
+The way you take me high 우린 높은 곳에 함께 갈래`,
+    timestamp: 80.0,
+    link: 'https://youtu.be/vLUtHODdLzk?si=rA30Nj2Xi3Hdu-pa',
+  },
+  {
+    id: 4000018,
+    title: 'Glow Up',
+    artist: 'RESCENE (리센느)',
+    lyrics: `맑은 향기가 살랑 불어와
+길을 나선 걸음엔 설렘만이 가득해`,
+    timestamp: 24.0,
+    link: 'https://youtu.be/h0xUtrb_JBc?si=fNbDCFtAGYBLGil3',
+  },
 		{
 			id: 3000031,
 			title: 'Sugarcoat (NATTY Solo)',
@@ -717,6 +935,51 @@ So 다 같이 뛰어놀자 한바탕 미쳐보자`,
 		},
 	],
 	happiness: [
+		  {
+    id: 4000019,
+    title: '드디어 끝나갑니다',
+    artist: '데이식스',
+    lyrics: `주인공은 행복합니다 지금부터 울 일은 없습니다
+고생은 없을 겁니다 걱정도 날라갑니다`,
+    timestamp: 48.0,
+    link: 'https://youtu.be/t5vHBX07Qb4?si=YIIX2bZImUVmfbg6',
+  },
+  {
+    id: 4000020,
+    title: '고양이 릴스 (Reel-ationship)',
+    artist: 'NCT WISH',
+    lyrics: `같이 웃을 수 있음 그걸로 좋아
+오늘 하루 이렇게 웃을 수 있으면 돼 Ay`,
+    timestamp: 132.0,
+    link: 'https://youtu.be/ya_LLqsH92s?si=4x-TjWM_pYqNUJqu',
+  },
+  {
+    id: 4000021,
+    title: 'WISH',
+    artist: 'NCT WISH',
+    lyrics: `늘 바라왔던 작은 소원
+네가 행복했으면 좋겠어`,
+    timestamp: 146.0,
+    link: 'https://youtu.be/hvQZs3k6Ytk?si=mpmygrSevnbDZ0R6',
+  },
+  {
+    id: 4000022,
+    title: 'Dear. My Darling',
+    artist: 'BOYNEXTDOOR',
+    lyrics: `그대는 행복해요
+음 바랄게요`,
+    timestamp: 92.0,
+    link: 'https://youtu.be/3Gqqmc7AWVE?si=x0pa7Y8spg8nYVEh',
+  },
+  {
+    id: 4000023,
+    title: '영웅에 대한 간단한 이야기',
+    artist: '까치산',
+    lyrics: `오래도록 변치 않을 이야기의 시작은
+"웃고 있는 표정이, 행복해 보였다."`,
+    timestamp: 149.0,
+    link: 'https://youtu.be/OH-aAioXPGg?si=v5QOLTa3XQIHds5C',
+  },
 		{
 			id: 3000021,
 			title: '좋지 아니한가',
@@ -913,6 +1176,15 @@ We'll be alright`,
 		},
 	],
 	health: [
+		  {
+    id: 4000061,
+    title: '나인데',
+    artist: '윤마치',
+    lyrics: `검은 머리 파뿌리 될 일이 내겐 없을 것 같은데
+아직 건강한 나인데`,
+    timestamp: 73.0,
+    link: 'https://youtu.be/s7pRAFm0nDI?si=i7nSlON-yxE6906s',
+  },
 		{
 			id: 3000004,
 			title: '무적 (ONE)',
@@ -1003,353 +1275,44 @@ When this rain stops 그때 다시 웃으면 돼`,
 			link: 'https://youtu.be/vBJVWOOsB4A?si=u5a2FNeksb_g6DW6',
 		},
 	],
-	impeachment: [
-		{
-			id: 3000014,
-			title: 'NO MERCY',
-			artist: 'B.A.P',
-			lyrics: '이제는 너그럽게 봐주지 않겠어',
-			timestamp: 193.0,
-			link: 'https://youtu.be/d5b1J0iSlfg?si=m5mJUxpyFezcMQMw',
-		},
-		{
-			id: 2000212,
-			title: 'JUSTICE',
-			artist: '드림캐쳐',
-			lyrics: `더 이상의 죄는 없어
-반복될 순 없으니`,
-			timestamp: 137,
-			link: 'https://www.youtube.com/watch?v=cTbSrtZTqgw',
-		},
-		{
-			id: 2000213,
-			title: 'Next Level',
-			artist: '에스파',
-			lyrics: `저 너머의 문을 열어 Next level
-널 결국엔 내가 부셔 Next level`,
-			timestamp: 46,
-			link: 'https://www.youtube.com/watch?v=tkzYyEp4zB4',
-		},
-		{
-			id: 2000214,
-			title: 'Step Back',
-			artist: 'GOT the beat',
-			lyrics: `넘지 말아 border line (step back, step back)
-니가 비빌 곳이 아니야 (step back, step back)`,
-			timestamp: 60,
-			link: 'https://www.youtube.com/watch?v=zspA0I7xme4',
-		},
-		{
-			id: 2000215,
-			title: 'Break It',
-			artist: '카라',
-			lyrics: `두 번 다신 볼 수 없게 주저없이 날려
-한번에 널 멋지게 차 버릴꺼야 break it`,
-			timestamp: 57,
-			link: 'https://youtu.be/ZM_4YQHOfXQ?si=GamAtzwQ-L-tDJg4',
-		},
-		{
-			id: 1000147,
-			title: 'Sucker Punch!',
-			artist: 'Xdinary Heroes',
-			lyrics: `Feels like sucker punch, 더 세게 한 방 또 날려
-Sucker punch, 이 순간만을 기다린 듯이, pow`,
-			timestamp: 56.0,
-			link: 'https://www.youtube.com/watch?v=rdNLkQ5PlVQ',
-		},
-		{
-			id: 1000148,
-			title: 'How Sweet',
-			artist: '뉴진스',
-			lyrics: `거기 숨지 말고 빨리 나와
-You, little demon in my storyline,
-don't knock on my door`,
-			timestamp: 202.0,
-			link: 'https://www.youtube.com/watch?v=vrM2mrI83uk',
-		},
-		{
-			id: 1000149,
-			title: '소년만화',
-			artist: 'Xdinary Heroes',
-			lyrics: `최악의 상황에 주먹을 뻗는다
-몇 번이든 상대가 나가떨어질 때까지`,
-			timestamp: 46.0,
-			link: 'https://www.youtube.com/watch?v=0HRVFXXPitY',
-		},
-		{
-			id: 1000150,
-			title: 'Future Perfect (Pass the MIC)',
-			artist: '엔하이픈',
-			lyrics: `Kill the past, 그냥 꺼져
-그냥 꺼져, 자격을 논해?`,
-			timestamp: 26.0,
-			link: 'https://youtu.be/I4yPQGSgNxk?si=ahFjN3OFP7sosXzj',
-		},
-		{
-			id: 1000151,
-			title: 'Am I Wrong',
-			artist: '방탄소년단',
-			lyrics: `뉴스를 봐도 아무렇지 않다면
-그 댓글이 아무렇지 않다면 그 증오가 아무렇지 않다면
-넌 정상 아닌 게 비정상`,
-			timestamp: 111.0,
-			link: 'https://www.youtube.com/watch?v=4fgUV5fzuIE',
-		},
-		{
-			id: 1000152,
-			title: 'Am I Wrong',
-			artist: '방탄소년단',
-			lyrics: `자 소리질러 MAYDAY MAYDAY
-온 세상이 다 미친 것 같아 끝인 것 같아`,
-			timestamp: 56.0,
-			link: 'https://www.youtube.com/watch?v=4fgUV5fzuIE',
-		},
 
-		{
-			id: 1000154,
-			title: 'JUSTICE',
-			artist: '드림캐쳐',
-			lyrics: `얼룩이 날 삼키지 못하게
-간절한 외침으로 Fight for justice, Rise up`,
-			timestamp: 40.0,
-			link: 'https://www.youtube.com/watch?v=cTbSrtZTqgw',
-		},
-
-		{
-			id: 1000156,
-			title: 'Next Level',
-			artist: '에스파',
-			lyrics: `위협에 맞서서
-제껴라 제껴라 제껴라`,
-			timestamp: 23.0,
-			link: 'https://www.youtube.com/watch?v=tkzYyEp4zB4',
-		},
-
-		{
-			id: 1000158,
-			title: 'Step Back',
-			artist: 'GOT the beat',
-			lyrics: `너 감히 누구라고 날 제껴
-이쯤에서 물러나고 입 닫는 게 좋을걸`,
-			timestamp: 15.0,
-			link: 'https://www.youtube.com/watch?v=zspA0I7xme4',
-		},
-		{
-			id: 1000159,
-			title: '때려쳐',
-			artist: 'DAY6',
-			lyrics: `때려쳐
-머릴 굴려보든 뭐를 더 하든
-답 없어`,
-			timestamp: 137.0,
-			link: 'https://www.youtube.com/watch?v=I1nGGToyte8',
-		},
-		{
-			id: 1000160,
-			title: '바꿔',
-			artist: '이정현',
-			lyrics: `거짓은 다 바꿔 바꿔 바꿔
-세상을 다 바꿔 `,
-			timestamp: 89.0,
-			link: 'https://www.youtube.com/watch?v=NY-U-0NHccs',
-		},
-		{
-			id: 1000161,
-			title: 'Fearless',
-			artist: '세븐틴',
-			lyrics: `영원한 건 절대 없단 걸
-알 수 있기에 끝낼 수 있어`,
-			timestamp: 148.0,
-			link: 'https://www.youtube.com/watch?v=kpewpapC9r8',
-		},
-		{
-			id: 1000162,
-			title: '전야 (前夜) (The Eve)',
-			artist: 'EXO',
-			lyrics: `깨고 부딪쳐야 해 우릴 볼 수 있도록
-크게 소리쳐야 해 멀리 번져가도록`,
-			timestamp: 43.0,
-			link: 'https://www.youtube.com/watch?v=gK8YC0nxNe0',
-		},
-		{
-			id: 1000163,
-			title: '전야 (前夜) (The Eve)',
-			artist: 'EXO',
-			lyrics: `여린 빛들이 번져가
-긴 어둠을 다 몰아낸 순간
-다시 깨어나야 해 새로워진 아침에`,
-			timestamp: 57.0,
-			link: 'https://www.youtube.com/watch?v=gK8YC0nxNe0',
-		},
-		{
-			id: 1000164,
-			title: '전야 (前夜) (The Eve)',
-			artist: 'EXO',
-			lyrics: `변화의 목소리 파도가 일어
-전부 집어삼킬 바다를 만든 건 It's you`,
-			timestamp: 133.0,
-			link: 'https://www.youtube.com/watch?v=gK8YC0nxNe0',
-		},
-		{
-			id: 1000165,
-			title: 'NOT TODAY',
-			artist: '방탄소년단',
-			lyrics: `오늘은 절대 죽지 말아 빛은 어둠을 뚫고 나가
-새 세상 너도 원해 Oh baby yes I want it`,
-			timestamp: 43.0,
-			link: 'https://youtu.be/mCtVrf2x5BQ?si=AbtRtgMamk7Digwa',
-		},
-		{
-			id: 1000166,
-			title: 'New World',
-			artist: '에이티즈',
-			lyrics: `천둥처럼 깨워 세상을 We are
-폭풍처럼 막을 수 없어 We are`,
-			timestamp: 66.0,
-			link: 'https://youtu.be/9_xKGr2OPv0?si=dIchravqK-VzERvX',
-		},
-		{
-			id: 1000167,
-			title: 'New World',
-			artist: '에이티즈',
-			lyrics: `역사의 페이지를 바꾸지
-일어나 망설이지 말고`,
-			timestamp: 166.0,
-			link: 'https://youtu.be/9_xKGr2OPv0?si=dIchravqK-VzERvX',
-		},
-		{
-			id: 1000168,
-			title: 'Answer',
-			artist: '에이티즈',
-			lyrics: `우리가 보이는가 타오르는 눈빛과
-삼킬 듯한 함성이 온 세상을 울리는 걸`,
-			timestamp: 177.0,
-			link: 'https://youtu.be/2sqtwAIqllU?si=gvKl3gRzdmbzjZd8',
-		},
-		{
-			id: 1000169,
-			title: 'Lesson 2 (Sunset)',
-			artist: '에픽하이',
-			lyrics: `다신 지껄일 수 없게
-깊게 널 묻고`,
-			timestamp: 205.0,
-			link: 'https://youtu.be/vhumd56d1S0?si=KaL3xrWMXo_uK8mR',
-		},
-		{
-			id: 1000170,
-			title: '시대유감 (時代遺憾)',
-			artist: '서태지와 아이들',
-			lyrics: `모두를 뒤집어
-새로운 세상이 오길 바라네`,
-			timestamp: 201.0,
-			link: 'https://youtu.be/hxENwcFvL3w?si=S9oFYoE2r0FvbwRL',
-		},
-		{
-			id: 1000171,
-			title: '다시 만난 세계 (Into The New World)',
-			artist: '소녀시대',
-			lyrics: `수많은 알 수 없는 길 속에 희미한 빛을 난 쫓아가
-언제까지라도 함께하는 거야 다시 만난 나의 세계`,
-			timestamp: 98.0,
-			link: 'https://youtu.be/mbg1Cn6Ua9U?si=vM200q1o0tWVg1Kn',
-		},
-		{
-			id: 1000172,
-			title: 'Run For Roses',
-			artist: 'NMIXX',
-			lyrics: `꿈꿔온 united Wanna get it
-Wanna fight it Wanna stand up & salute`,
-			timestamp: 44.0,
-			link: 'https://youtu.be/h00DpJn_ldM?si=EvQ8NqkaaDH-3OVl',
-		},
-		{
-			id: 1000173,
-			title: 'MAMACITA (아야야)',
-			artist: '슈퍼주니어',
-			lyrics: `감투를 쓴 자 무게를 느껴!
-You can't do that!`,
-			timestamp: 62.0,
-			link: 'https://youtu.be/-kiLkUIpe5M?si=5auE-32aHkSHF6Ro',
-		},
-		{
-			id: 1000174,
-			title: 'HIT',
-			artist: '세븐틴',
-			lyrics: `우리를 위해 이 노랠 부르자
-한계를  넘어선 우리는 HIGHER`,
-			timestamp: 155.0,
-			link: 'https://youtu.be/qpbJcxKX_rI?si=P3P6Ybl8hS_jhfid',
-		},
-		{
-			id: 1000175,
-			title: '전사의 후예 (폭력시대)',
-			artist: 'H.O.T.',
-			lyrics: `그들은 나를 짓밟았어 하나 남은 꿈도 다 가져 갔어
-길을 찾아 봤어 아무데도 없어
-이제 내가 나를 벌하겠어`,
-			timestamp: 30.0,
-			link: 'https://youtu.be/RpGTUmISOyg?si=Rik6yYCDC8rbuKy3',
-		},
-		{
-			id: 1000176,
-			title: '우린',
-			artist: 'DAY6 (Even of Day)',
-			lyrics: `눈앞이 다 깜깜해도 어둠이 짙어 보여도
-틀림없는 사실은 다시 빛은 돌아와`,
-			timestamp: 183.0,
-			link: 'https://youtu.be/tqyrl2V1kTM?si=td1bZUBW-m_aaxMe',
-		},
-		{
-			id: 1000177,
-			title: '촛불하나',
-			artist: 'god',
-			lyrics: `불을 밝히니 촛불이 두 개가 되고
-그 불빛으로 다른 초를 또 찾고
-세 개가 되고 네 개가 되고 어둠은 사라져가고`,
-			timestamp: 107.0,
-			link: 'https://youtu.be/IJRo4GJqTfE?si=PKsbWrDR8IkYhh5A',
-		},
-		{
-			id: 1000178,
-			title: '촛불하나',
-			artist: 'god',
-			lyrics: `작은 촛불하나 켜보면
-달라지는게 너무나도 많아`,
-			timestamp: 98.0,
-			link: 'https://youtu.be/IJRo4GJqTfE?si=PKsbWrDR8IkYhh5A',
-		},
-
-		{
-			id: 1000180,
-			title: '꺼져',
-			artist: '효린',
-			lyrics: `꺼져 당장 내 눈 앞에서
-더 이상 못 참겠어 내 인생에서 좀 꺼져`,
-			timestamp: 59.0,
-			link: 'https://youtu.be/_2ySEor8tCU?si=BHzJiCTfH44U0mk5',
-		},
-		{
-			id: 1000181,
-			title: 'Girls',
-			artist: '에스파',
-			lyrics: `혼돈 속에서 피어나 (We Them Girls)
-두려움에 맞설 그런 용기 (Ah Yeah)
-언제라도 우린 Together`,
-			timestamp: 69.0,
-			link: 'https://youtu.be/MBbqqWqLPlI?si=GrJCCeC0EEMMEk7S',
-		},
-		{
-			id: 1000182,
-			title: 'Girls',
-			artist: '에스파',
-			lyrics: `일어나라 그대여 더 치명적인 전쟁 속에
-두발로 버텨 적의 Hook! Black Mamba
-두렵지 않아 네가 Hoot! 부셔줄게`,
-			timestamp: 11.0,
-			link: 'https://youtu.be/MBbqqWqLPlI?si=GrJCCeC0EEMMEk7S',
-		},
-	],
 	luck: [
+		{
+    id: 4000024,
+    title: 'Lucky',
+    artist: 'RIIZE',
+    lyrics: `So lucky lucky
+Yeah lucky lucky you`,
+    timestamp: 3.0,
+    link: 'https://youtu.be/3Q49g7M5MlU?si=4r_6B5QX2sc6EcAS',
+  },
+  {
+    id: 4000025,
+    title: '행운의 달',
+    artist: '원위 (ONEWE)',
+    lyrics: `저 하늘에게 외쳐본다 듣고 답을 해줘
+하나밖에 없는 내 소원을`,
+    timestamp: 50.0,
+    link: 'https://youtu.be/pQ7Zj8CbCoU?si=sHZBMgw6OsIepRum',
+  },
+  {
+    id: 4000026,
+    title: 'ATTITUDE',
+    artist: 'IVE',
+    lyrics: `이리저리 부딪혀도
+행운은 늘 내 편인 걸`,
+    timestamp: 59.0,
+    link: 'https://youtu.be/38xYeot-ciM?si=67JIEGgDBH2LMKXl',
+  },
+  {
+    id: 4000027,
+    title: 'Lucky Star',
+    artist: 'NiziU',
+    lyrics: `너의 행운을 빌어
+소원이 이뤄지길`,
+    timestamp: 43.0,
+    link: 'https://youtu.be/rzZjF94t9ec?si=nMFftkCF_eBFs9Ld',
+  },
 		{
 			id: 3000003,
 			title: 'Lucky',
@@ -1454,6 +1417,15 @@ You can't do that!`,
 	],
 	marriage: [
 		{
+    id: 4000028,
+    title: 'Marry Me (Feat. 구윤회)',
+    artist: '마크툽(MAKTUB)',
+    lyrics: `Marry Me 내 손 잡아줄래요
+Marry Me 나와 평생 함께 할래요`,
+    timestamp: 83.0,
+    link: 'https://www.youtube.com/watch?v=--knPjoSlNE&list=RD--knPjoSlNE&start_radio=1',
+  },
+		{
 			id: 2000194,
 			title: '감사',
 			artist: '김동률',
@@ -1518,25 +1490,6 @@ I'll get along with your dad for you`,
 			link: 'https://youtu.be/5MO_BUNA6Es?si=jx59KJjWIz05WuxM',
 		},
 		{
-			id: 1000017,
-			title: 'You Wake Me Up',
-			artist: '성진',
-			lyrics: `너 없인 다시 일어설 자신이 없어
-내 곁엔 늘 네가 스며들어 있단 생각에 난 또 나아가
-You wake me up`,
-			timestamp: 60.0,
-			link: 'https://youtu.be/XCOlK4MS_9M?si=clZpgkQg7_wg-llw',
-		},
-		{
-			id: 1000018,
-			title: '사랑歌',
-			artist: 'EPEX',
-			lyrics: `창해같이 깊고도
-달 밝은 밤처럼 환한 내 사랑`,
-			timestamp: 55.0,
-			link: 'https://youtu.be/0B8YtjCyJcs?si=tfSdAclJvtmHVLp7',
-		},
-		{
 			id: 1000019,
 			title: '작은 언약식',
 			artist: 'EPEX',
@@ -1556,6 +1509,24 @@ You wake me up`,
 		},
 	],
 	study: [
+		  {
+    id: 4000029,
+    title: '가장 빛날 너에게',
+    artist: '아일릿 (ILLIT)',
+    lyrics: `넓은 세상 향해 높이 날아
+지금 이 순간 가장 빛날 거야`,
+    timestamp: 48.0,
+    link: 'https://youtu.be/kURYgogXHrk?si=QzMZeV9zMh6klGgm',
+  },
+  {
+    id: 4000030,
+    title: 'Racecar',
+    artist: 'izna (이즈나)',
+    lyrics: `하늘 끝에 닿을 때까지 hold on me
+황홀한 질주, 난 멈추지 않아`,
+    timestamp: 26.0,
+    link: 'https://youtu.be/oVONik56_Q8?si=D8Y6wPb7tfkboT5O',
+  },
 		{
 			id: 3000008,
 			title: 'unlucky',
@@ -1747,6 +1718,93 @@ Everything's gonna be alright`,
 		},
 	],
 	success: [
+		  {
+    id: 4000031,
+    title: '어지러워',
+    artist: '유다빈밴드',
+    lyrics: `내 진심을 다해
+나를 살아낼게 나의 바다`,
+    timestamp: 101.0,
+    link: 'https://youtu.be/c-QKXFDbrUY?si=TxbVomk8wajiWAJl',
+  },
+  {
+    id: 4000032,
+    title: 'Sail Away',
+    artist: 'NCT WISH',
+    lyrics: `반드시 닿을 거야 내 꿈에`,
+    timestamp: 95.0,
+    link: 'https://youtu.be/VLtIZR4wHtU?si=RL58F3b8odkm-jSw',
+  },
+  {
+    id: 4000033,
+    title: 'Songbird',
+    artist: 'NCT WISH',
+    lyrics: `생각하는 대로 이뤄지는 Wish`,
+    timestamp: 135.0,
+    link: 'https://youtu.be/1wcQnFzozLI?si=zOhnf7Dpc1bxhqn1',
+  },
+  {
+    id: 4000034,
+    title: 'REBEL HEART',
+    artist: 'IVE',
+    lyrics: `시작은 항상 다 이룬 것처럼
+엔딩은 마치 승리한 것처럼`,
+    timestamp: 5.0,
+    link: 'https://youtu.be/g36q0ZLvygQ?si=zkTKdVNncR0H77Yw',
+  },
+  {
+    id: 4000035,
+    title: 'Lucky to be loved',
+    artist: 'TWS (투어스)',
+    lyrics: `요즘엔 막연히 꿈꾸던 일들을 이뤄 가고 있어
+하루가 빠르게 흘러가 버려도 아쉬움은 없어`,
+    timestamp: 53.0,
+    link: 'https://youtu.be/QebzUKN9jYo?si=c7bOwvIyGDpCgScs',
+  },
+  {
+    id: 4000036,
+    title: 'Golden',
+    artist: 'HUNTR/X',
+    lyrics: `You know that it's our time, no fears, no lies
+That's who we're born to be`,
+    timestamp: 166.0,
+    link: 'https://youtu.be/43vgxD5JyQQ?si=nXG5q7Y4s7HnZ3-r',
+  },
+  {
+    id: 4000037,
+    title: 'Sail Away',
+    artist: 'NCT WISH',
+    lyrics: `거친 파도마저 두렵지 않지 내 마음을 이끄는 Emotion`,
+    timestamp: 71.0,
+    link: 'https://youtu.be/VLtIZR4wHtU?si=qdi8MoDSz0-odq8a',
+  },
+  {
+    id: 4000038,
+    title: 'Mamma Mia',
+    artist: 'izna (이즈나)',
+    lyrics: `아무리 날 멈추려 가두려 해도 계속해서 올라가
+저 위에 서서 웃고 있는 우리를 봐`,
+    timestamp: 45.0,
+    link: 'https://youtu.be/qb6SQIA7uKc?si=l1Nyig1wX04W2RcJ',
+  },
+  {
+    id: 4000039,
+    title: 'XOXZ',
+    artist: 'IVE',
+    lyrics: `두 눈 꼭 감아볼래? 어떤 판타질 상상하든
+내가 다 이뤄줄게, 너는 그냥 꿈만 꾸면 돼`,
+    timestamp: 5.0,
+    link: 'https://youtu.be/8N00ltoUbdY?si=uAtOf1fkoE131my2',
+  },
+		{
+			id: 1000174,
+			title: 'HIT',
+			artist: '세븐틴',
+			lyrics: `우리를 위해 이 노랠 부르자
+한계를  넘어선 우리는 HIGHER`,
+			timestamp: 155.0,
+			link: 'https://youtu.be/qpbJcxKX_rI?si=P3P6Ybl8hS_jhfid',
+		},
 		{
 			id: 1000231,
 			title: 'Miracle (기적은 너와 내가 함께하는 순간마다 일어나고 있어)',
@@ -1982,6 +2040,23 @@ We go up uh we go up`,
 		},
 	],
 	trip: [
+		  {
+    id: 4000040,
+    title: 'PARADISE',
+    artist: '트레저',
+    lyrics: `Let's go!
+떠나보자 우리 어디든 어디론가`,
+    timestamp: 4.0,
+    link: 'https://youtu.be/gZNQs3jA7aE?si=0GggN5eJIqE57TGL',
+  },
+  {
+    id: 4000041,
+    title: 'What You Want',
+    artist: '코르티스',
+    lyrics: `바라던 걸 찾아 집을 떠나, what we came for`,
+    timestamp: 39.0,
+    link: 'https://youtu.be/e2OpbOv_JiQ?si=7m_gUGH5Kg24rInm',
+  },
 		{
 			id: 3000030,
 			title: 'Vacation',
@@ -2092,6 +2167,70 @@ We go up uh we go up`,
 		},
 	],
 	rich: [
+		  {
+    id: 4000042,
+    title: 'Rich Man',
+    artist: 'aespa',
+    lyrics: `I am a rich man (I'ma carry myself)
+I am a rich man (I'ma carry myself)`,
+    timestamp: 10.0,
+    link: 'https://youtu.be/5oQVTnq-UKk?si=pis6NHEgxDhLlG6f',
+  },
+  {
+    id: 4000043,
+    title: 'MON3Y 8ANK',
+    artist: '영파씨 (YOUNG POSSE)',
+    lyrics: `Be a Millionaire 그래 내 꿈은 밀리어네어
+부자가 되면 너무 좋겠네`,
+    timestamp: 33.0,
+    link: 'https://youtu.be/R5X5HGJHfew?si=x4DHV7RpriF3VGeq',
+  },
+  {
+    id: 4000044,
+    title: 'Good Thing',
+    artist: 'i-dle (아이들)',
+    lyrics: `난 1억 5000짜리 시계를 차고
+그 다음에 르쉐 or 람보 키를 손에 들고`,
+    timestamp: 19.0,
+    link: 'https://youtu.be/hAONx6nuEgI?si=Ge4sdG1D1m-zsShU',
+  },
+  {
+    id: 4000045,
+    title: '오르자',
+    artist: '둘째이모 김다비',
+    lyrics: `들숨에는 월급을 날숨에는 뽀너스
+오르자 오르자 오르자 연봉아 오르자`,
+    timestamp: 90.0,
+    link: 'https://youtu.be/Jw_pQWYa8dU?si=u7QuGk-I7mjeyFX_',
+  },
+  {
+    id: 4000046,
+    title: 'Rich Man',
+    artist: 'aespa',
+    lyrics: `My mom said to me, “Find someone who can give you everything”
+And I said, “Mom, I already have everything”`,
+    timestamp: 0.0,
+    link: 'https://youtu.be/vkLpkQV8v4w?si=RpIuBsl1JB2R7LnJ',
+  },
+  {
+    id: 4000047,
+    title: 'FaSHioN',
+    artist: '코르티스',
+    lyrics: `내 티, five bucks, 바지는 만원
+My vision 몇 억s, 몇 조s, Bezos`,
+    timestamp: 6.0,
+    link: 'https://youtu.be/42wfEs7oIP8?si=ubo-4WNx60ua9BrF',
+  },
+  {
+    id: 4000048,
+    title: '힙합보단 사랑, 사랑보단 돈 (Feat. 베이식)',
+    artist: '노아주다',
+    lyrics: `그래, 난 돈이나 벌래
+돈이 많음 하나도 안 외로워
+돈이 많음 하나도 안 서러워`,
+    timestamp: 72.0,
+    link: 'https://youtu.be/NOlIxr8ygcI?si=_bfyocEI-e1ZZPiE',
+  },
 		{
 			id: 2000198,
 			title: 'UN Village',
@@ -2184,6 +2323,98 @@ baby 일하지마 돈벌어 돈벌어 돈벌어 돈벌어`,
 		},
 	],
 	love: [
+		  {
+    id: 4000049,
+    title: 'Pretty Please',
+    artist: '하츠투하츠',
+    lyrics: `찾아 우리만의 Place
+어디든 달려갈래 너의 손 꼭 잡은 채`,
+    timestamp: 67.0,
+    link: 'https://youtu.be/ufwB9Uja_wM?si=55-cvoTtENPkefE2&t',
+  },
+  {
+    id: 4000050,
+    title: 'LOVE SONG',
+    artist: '유다빈밴드',
+    lyrics: `우리 사랑엔 빛이 있기에
+나의 아침은 영원할 거야`,
+    timestamp: 78.0,
+    link: 'https://youtu.be/iBHn_l5xJKc?si=e6fD7gexBmQcbfBy',
+  },
+  {
+    id: 4000051,
+    title: 'LIKE YOU BETTER',
+    artist: '프로미스나인',
+    lyrics: `I LIKE YOU BETTER
+널 내일이라 부를래 더 뜨겁게`,
+    timestamp: 53.0,
+    link: 'https://youtu.be/r1QapH1SIAI?si=U0oxmYQTA9hI2RNn',
+  },
+  {
+    id: 4000052,
+    title: '내 안의 모든 시와 소설은',
+    artist: 'CLOSE YOUR EYES',
+    lyrics: `내 안의 모든 시와 소설은
+너로 수놓아진 얘기들
+Look, everything I do, everything I do`,
+    timestamp: 54.0,
+    link: 'https://youtu.be/7dVwqwzavgg?si=yoDKsf9-DiwE-286',
+  },
+  {
+    id: 4000053,
+    title: 'poppop',
+    artist: 'NCT WISH',
+    lyrics: `멋진 기분 애니 속의 주인공은
+너와 나야 popping`,
+    timestamp: 92.0,
+    link: 'https://youtu.be/LNETckymbzk?si=L5GCddhAvOhgHAbe',
+  },
+  {
+    id: 4000054,
+    title: '피노키오는 거짓말을 싫어해',
+    artist: 'AHOF (아홉)',
+    lyrics: `내 맘속에 아주 깊게 파란 소원을 이젠 깨울래
+두렵지 않아 너의 손을 잡은 지금`,
+    timestamp: 171.0,
+    link: 'https://youtu.be/2RKf0dEOWNk?si=Iy4oVbCnovAzKoCy',
+  },
+  {
+    id: 4000055,
+    title: '그곳에서 다시 만나기로 해 (Rendezvous)',
+    artist: 'AHOF (아홉)',
+    lyrics: `한번 시작된 맘을 멈추긴 어려워
+내 곁을 스쳐 지날 땐 미처 몰랐던 것
+소중한 기억 아마 영원할 Memories`,
+    timestamp: 16.0,
+    link: 'https://youtu.be/D2-G60fuW_4?si=lrzlvF6G1cUg1-Uz',
+  },
+  {
+    id: 4000056,
+    title: '__에게',
+    artist: '한로로',
+    lyrics: `하루 또 하루 지나가도 보고 싶을 너의 모든 걸 잊지 않을 거야
+다음에도 만나자 약속해`,
+    timestamp: 85.0,
+    link: 'https://youtu.be/eOnCzQ6Z5ZM?si=APVEsfuj7c0q-r5U',
+  },
+  {
+    id: 4000057,
+    title: '바람',
+    artist: '유다빈밴드',
+    lyrics: `유한하게 남은 날들을 다 가질 순 없으니
+빈틈없이 사랑하자`,
+    timestamp: 141.0,
+    link: 'https://youtu.be/5Wjk2jtmraA?si=9CihgECY_XeLZEVF',
+  },
+  {
+    id: 4000058,
+    title: 'UxYOUxU',
+    artist: '최립우',
+    lyrics: `내 마음은 달려가, 네게만
+부탁해 please hold on 조금만`,
+    timestamp: 42.0,
+    link: 'https://youtu.be/HjsyPgCO5Vk?si=hEqJD4TzWyZjqYv0',
+  },
 		{
 			id: 3000023,
 			title: 'Pump Up The Volume!',
@@ -2475,6 +2706,24 @@ It’s our dream sweet melody`,
 		},
 	],
 	comfort: [
+		{
+    id: 4000059,
+    title: 'Still Love You',
+    artist: '더보이즈',
+    lyrics: `만약 길을 잃어버려도 너무 걱정하지 마
+우리 함께라면 전부 여행일 거야`,
+    timestamp: 108.0,
+    link: 'https://youtu.be/pJoJWor9a1w?si=etexmOJCBhE4vZjq',
+  },
+  {
+    id: 4000060,
+    title: '소네트 (Sonnet)',
+    artist: '도영',
+    lyrics: `기억해 우리의 포개어진 손 위로
+찬란히 흐르던 이 노래, 그 모든 약속을`,
+    timestamp: 155.0,
+    link: 'https://youtu.be/umcNKrbDi1U?si=WmgDBoK_wS_1-vnm',
+  },
 		{
 			id: 3000034,
 			title: 'Gonna Be Alright',
