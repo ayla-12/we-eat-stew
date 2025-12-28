@@ -17,7 +17,7 @@ const TimerMessage = ({ timestamp }: { timestamp: number }) => {
 	return (
 		<p>
 			{calculatePlayTime()}에 이 곡을 재생하면 <br />
-			2025년이 시작될 때 이 가사를 들을 수 있어요!
+			2026년이 시작될 때 이 가사를 들을 수 있어요!
 		</p>
 	);
 };
